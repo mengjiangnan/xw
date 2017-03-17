@@ -12,5 +12,7 @@
            echo $my_class->getTitle();
            ?>
        </title>
+       <!--标题图标-->
+       <link rel="shortcut icon" href="xw_icon.ico" type="image/x-icon">
    </head>
 </html>
