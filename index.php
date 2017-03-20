@@ -20,6 +20,37 @@
    </head>
  <body>
    <div class="top_nav" id="nav_outside">
+       <div class="top_nav_inner" id="nav_inner">
+           <ul class="top_nav_ul" id="nav_ul">
+               <li class="top_logo" id="logo">
+               </li>
+               <li class="top_li_second" id="li_second">
+                   <a class="top_li_second" id="li_second_a" href="#">
+                       我的最爱
+                   </a>
+               </li>
+               <li class="top_li_three" id="li_three">
+                   <a class="top_li_three" id="li_three_a" href="#">
+                       我关注的
+                   </a>
+               </li>
+               <li class="top_li_four" id="li_four">
+                   <a class="top_li_four" id="li_four_a" href="#">
+                       收藏夹
+                   </a>
+               </li>
+               <li class="top_li_five" id="li_five">
+                   <a class="top_li_five" id="li_five_a" href="#">
+                       手机版
+                   </a>
+               </li>
+               <li class="top_li_six" id="li_six">
+                   <a class="top_li_six" id="li_six_a" href="#">
+                       Login
+                   </a>
+               </li>
+           </ul>
+       </div>
    </div>
  </body>
 </html>
