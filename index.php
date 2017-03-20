@@ -23,6 +23,9 @@
        <div class="top_nav_inner" id="nav_inner">
            <ul class="top_nav_ul" id="nav_ul">
                <li class="top_logo" id="logo">
+                   <a class="top_li_first" id="li_first_a" href="#">
+                       <img src="./Image/logo/xw_icon_test1.png">
+                   </a>
                </li>
                <li class="top_li_second" id="li_second">
                    <a class="top_li_second" id="li_second_a" href="#">
