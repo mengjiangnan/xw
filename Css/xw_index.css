@@ -1,7 +1,6 @@
-body{
+*{
     margin: 0;
     padding: 0;
-    font-family: 微软雅黑;
 }
 ul{
     list-style: none;
@@ -9,16 +8,30 @@ ul{
 a{
     text-decoration: none;
 }
-div{
-    display: block;
+input{
+    border: 0;
+    outline: 0;
+    font-family: 微软雅黑;
+    font-weight: 100;
 }
-#nav_outside{
+img{
+    outline: none;
+    border: none;
+}
+body{
+    width: 100%;
+    min-width: 1200px;
+    font-family: 微软雅黑;
+}
+/*公共头部样式*/
+.top_nav{
     width: 100%;
     height: 50px;
-    background-color: orangered;
+    background: #ff4500;
+    min-width: 1200px;
     font-size: 14px;
 }
-#nav_inner{
+.top_nav_inner{
     width: 1200px;
     height: 100%;
     padding: 0 50px;
@@ -26,42 +39,70 @@ div{
     box-sizing: border-box;
     position: relative;
 }
-#nav_ul{
+/*导航部分*/
+.top_nav_ul{
     width: 100%;
+    overflow: hidden;
 }
 .top_nav_ul li{
     float: left;
-    margin: 0 10px;
     line-height: 50px;
+    margin: 0 10px;
 }
 .top_nav_ul li a{
-    color: white;
+    color: #fff;
     padding: 0 10px;
     margin: 0 12px;
+    transition: 0.6s;
     -webkit-transition: 0.6s;
     -o-transition: 0.6s;
-    -ms-transition: 0.6s;
     -moz-transition: 0.6s;
+    -ms-transition: 0.6s;
     cursor: pointer;
 }
-.top_nav_ul li a:hover{
-    color: darkgray;
-}
-/*.top_nav_ul .top_li_seven .top_search{
-    width:18px;
-    height:18px;
-    margin: 16px 30px 0 30px;
-    -webkit-transition: 0.6s;
-    -o-transition: 0.6s;
-    -ms-transition: 0.6s;
-    -moz-transition: 0.6s;
-    background: url(/search.png) no-repeat;
-}*/
-#logo{
-    width: 200px;
-    height:100%;
+.top_nav_ul .top_logo{
+    width: 65px;
+    height: 100%;
     margin-right: 20px;
-    margin-top: 10px;
+    padding-top: 10px;
     box-sizing: border-box;
     line-height: 45px;
+}
+.top_nav_ul .top_logo img{
+    width: 25px;
+    height: 25px;
+}
+.top_nav_ul li a:hover{
+    color: #747474;
+}
+.top_nav_ul .top_search a,
+.top_nav_ul .top_list a{
+    width: 18px;
+    height: 18px;
+    margin: 16px 30px 0 30px;
+    transition: 0.6s;
+    -webkit-transition: 0.6s;
+    -o-transition: 0.6s;
+    -moz-transition: 0.6s;
+    -ms-transition: 0.6s;
+    background: url(../Image/other/search.png) no-repeat;
+}
+.top_nav_ul .top_search a:hover{
+    background: url(../Image/other/search1.png) no-repeat;
+}
+.top_nav_ul .top_list a{
+    background: url(../Image/other/list.png) no-repeat;
+}
+.top_nav_ul .top_list a:hover{
+    background: url(../Image/other/list1.png) no-repeat;
+}
+/*搜索框*/
+.search_main{
+    position: absolute;
+    left: 15%;
+    top:0;
+    width:50%;
+    height: 100%;
+    background:#ff4500;
+    display: none;
 }

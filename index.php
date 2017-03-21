@@ -47,17 +47,34 @@
                        手机版
                    </a>
                </li>
-               <li class="top_li_six" id="li_six">
-                   <a class="top_li_six" id="li_six_a" href="#">
-                       Login
+               <li class="top_search" id="li_search">
+                   <a class="top_search" id="li_search_a" href="#">
                    </a>
                </li>
-               <li class="top_li_seven" id="li_seven">
-                   <a class="top_search" id="li_search_a" href="#">
-                       Search
+               <li class="top_list" id="li_list">
+                   <a class="top_list" id="li_list_a" href="#">
                    </a>
                </li>
            </ul>
+           <!--搜索-->
+           <form action="">
+               <div class="search_main">
+               </div>
+           </form>
+           <!--会员登录-->
+           <div class="member">
+               <p>会员中心</p>
+               <ul>
+                   <li>
+                       <img alt="" src="./Image/other">
+                       <a href="#">登录</a>
+                   </li>
+                   <li>
+                       <img alt="" src="./Image/other">
+                       <a href="#">新会员注册</a>
+                   </li>
+               </ul>
+           </div>
        </div>
    </div>
  </body>
