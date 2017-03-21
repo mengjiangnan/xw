@@ -11,7 +11,7 @@ a{
 input{
     border: 0;
     outline: 0;
-    font-family: 微软雅黑;
+    font-family:"微软雅黑";
     font-weight: 100;
 }
 img{
@@ -21,7 +21,7 @@ img{
 body{
     width: 100%;
     min-width: 1200px;
-    font-family: 微软雅黑;
+    font-family:"微软雅黑";
 }
 /*公共头部样式*/
 .top_nav{
@@ -75,6 +75,12 @@ body{
 .top_nav_ul li a:hover{
     color: #747474;
 }
+.top_nav_ul .top_search,
+.top_nav_ul .top_list,
+.top_nav_ul .close{
+    height: 50px;
+    margin-top: 30px;
+}
 .top_nav_ul .top_search a,
 .top_nav_ul .top_list a{
     width: 18px;
@@ -105,4 +111,74 @@ body{
     height: 100%;
     background:#ff4500;
     display: none;
+}
+.search_main .search_btn,
+.search_main .close_btn{
+    width: 50px;
+    height: 50px;
+    transition: 0.6s;
+    -webkit-transition: 0.6s;
+    -o-transition: 0.6s;
+    -moz-transition: 0.6s;
+    -ms-transition: 0.6s;
+    background: url(../Image/other/search.png) no-repeat center;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.search_main .search_btn:hover{
+    background: url(../Image/other/search1.png) no-repeat center;
+}
+.search_main input .search_text{
+    height: 100%;
+    width:90%;
+    background: #ff4500;
+    color: #fff;
+}
+.search_main .close_btn{
+    background: url(../Image/other/close.png) no-repeat center;
+}
+.search_main .close_btn:hover{
+    background:url(../Image/other/close1.png) no-repeat center;
+}
+/*会员登录*/
+.member{
+    display: none;
+    width: 200px;
+    height: 130px;
+    background: url(../Image/other/huiyuan.png) no-repeat;
+    background-size:100% 100%;
+    position: absolute;
+    right: 39px;
+    top: 40px;
+    z-index: 1000;
+}
+.member p{
+    width: 84%;
+    margin: 10px 8%;
+    line-height: 40px;
+    border-bottom: 1px solid #b3b3b3;
+    color: #7d7c81;
+    text-align: center;
+    font-size: 18px;
+}
+.member ul{
+    width: 84%;
+    margin: 0 8%;
+}
+.member ul li{
+    line-height: 25px;
+    font-size: 12px;
+}
+.member ul li img{
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+}
+.member ul li a{
+    color: #460085;
+}
+.member ul li a:hover{
+    text-decoration: underline;
 }
