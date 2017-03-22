@@ -79,7 +79,7 @@ body{
 .top_nav_ul .top_list,
 .top_nav_ul .close{
     height: 50px;
-    margin-top: 30px;
+    /*margin-top: 30px;*/
 }
 .top_nav_ul .top_search a,
 .top_nav_ul .top_list a{
@@ -91,16 +91,16 @@ body{
     -o-transition: 0.6s;
     -moz-transition: 0.6s;
     -ms-transition: 0.6s;
-    background: url(../Image/other/search.png) no-repeat;
+    background: url(../Image/other_img/search.png) no-repeat;
 }
 .top_nav_ul .top_search a:hover{
-    background: url(../Image/other/search1.png) no-repeat;
+    background: url(../Image/other_img/search1.png) no-repeat;
 }
 .top_nav_ul .top_list a{
-    background: url(../Image/other/list.png) no-repeat;
+    background: url(../Image/other_img/list.png) no-repeat;
 }
 .top_nav_ul .top_list a:hover{
-    background: url(../Image/other/list1.png) no-repeat;
+    background: url(../Image/other_img/list1.png) no-repeat;
 }
 /*搜索框*/
 .search_main{
@@ -121,14 +121,14 @@ body{
     -o-transition: 0.6s;
     -moz-transition: 0.6s;
     -ms-transition: 0.6s;
-    background: url(../Image/other/search.png) no-repeat center;
+    background: url(../Image/other_img/search.png) no-repeat center;
     float: left;
     border: none;
     outline: none;
     cursor: pointer;
 }
 .search_main .search_btn:hover{
-    background: url(../Image/other/search1.png) no-repeat center;
+    background: url(../Image/other_img/search1.png) no-repeat center;
 }
 .search_main input .search_text{
     height: 100%;
@@ -137,17 +137,17 @@ body{
     color: #fff;
 }
 .search_main .close_btn{
-    background: url(../Image/other/close.png) no-repeat center;
+    background: url(../Image/other_img/close.png) no-repeat center;
 }
 .search_main .close_btn:hover{
-    background:url(../Image/other/close1.png) no-repeat center;
+    background:url(../Image/other_img/close1.png) no-repeat center;
 }
 /*会员登录*/
 .member{
     display: none;
     width: 200px;
     height: 130px;
-    background: url(../Image/other/huiyuan.png) no-repeat;
+    background: url(../Image/other_img/huiyuan.png) no-repeat;
     background-size:100% 100%;
     position: absolute;
     right: 39px;
