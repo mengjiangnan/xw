@@ -61,7 +61,8 @@
            <!--搜索-->
            <form action="">
                <div class="search_main">
-                   <button class="search_btn" type="submit"></button>
+                   <!--<button class="search_btn" type="submit"></button>-->
+                   <button class="search_btn" disabled="disabled"></button>
                    <input class="search_text" type="text" placeholder="搜索">
                    <span class="close_btn"></span>
                </div>
@@ -87,7 +88,7 @@
      $(function () {
          $(".top_search_a").click(function () {
              $(".top_nav_ul").fadeOut(500);
-             $(".search_main").fadeIn(1000);
+             $(".search_main").fadeIn(50);
          });
          $(".search_main .close_btn").click(function () {
              $(".search_main").fadeOut(500);
