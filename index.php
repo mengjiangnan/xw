@@ -100,6 +100,7 @@
          $(".top_search_a").click(function () {
              $("top_nav_ul").fadeOut(500);
              $(".search_main").fadeIn(1000);
+             inner_input.hide();
          });
          $(".search_main .close_btn").click(function () {
              $(".search_main").fadeOut(500);
