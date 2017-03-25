@@ -64,7 +64,7 @@
                    <!--<button class="search_btn" type="submit"></button>-->
                    <button class="search_btn" disabled="disabled"></button>
                    <input class="search_text" type="text" placeholder="搜索">
-                   <span class="inner_input" id="inner_input_span" style="display:none">清除</span>
+                   <span class="inner_input" id="inner_input_span">清除</span>
                    <span class="close_btn"></span>
                </div>
            </form>

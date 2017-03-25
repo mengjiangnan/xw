@@ -150,6 +150,7 @@ body{
     background:url(../Image/other_img/close1.png) no-repeat center;
 }
 .search_main .inner_input{
+    display: none;
     position: absolute;
     top: 15px;
     right: 0px;
