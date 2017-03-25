@@ -26,7 +26,7 @@
            <ul class="top_nav_ul" id="nav_ul">
                <li class="top_logo" id="logo">
                    <a class="top_li_first" id="li_first_a">
-                       <!--<img src="./Image/logo/xw_icon_test1.png">-->
+                       <img src="./Image/logo/xw_icon_test1.png">
                    </a>
                </li>
                <li class="top_li_second" id="li_second">
@@ -64,6 +64,7 @@
                    <!--<button class="search_btn" type="submit"></button>-->
                    <button class="search_btn" disabled="disabled"></button>
                    <input class="search_text" type="text" placeholder="搜索">
+                   <span class="inner_input" id="inner_input_span" style="display:none">清除</span>
                    <span class="close_btn"></span>
                </div>
            </form>
@@ -84,21 +85,31 @@
        </div>
    </div>
  <script>
+     /*input框内清除按钮更改*/
+     var text = $(".search_text");
+     var inner_input = $(".inner_input");
+     text.focus(function () {
+         inner_input.show();
+     });
+     inner_input.click(function () {
+         text.val('');
+         inner_input.hide();
+     });
      /*搜索*/
-     $(function () {
+     $(document).ready($(function () {
          $(".top_search_a").click(function () {
-             $(".top_nav_ul").fadeOut(500);
-             $(".search_main").fadeIn(50);
+             $("top_nav_ul").fadeOut(500);
+             $(".search_main").fadeIn(1000);
          });
          $(".search_main .close_btn").click(function () {
              $(".search_main").fadeOut(500);
-             $(".top_nav_ul").fadeIn(1000);
-         })
+             $("top_nav_ul").fadeIn(1000);
+         });
          /*登录*/
          $(".top_list a").click(function () {
              $(".member").slideToggle(500);
          });
-     });
+     }));
  </script>
  </body>
 </html>
