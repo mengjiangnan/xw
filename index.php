@@ -69,7 +69,7 @@
                </div>
            </form>
            <!--会员登录-->
-           <div class="member">
+           <div class="member" id="member_div">
                <p>会员中心</p>
                <ul>
                    <li>
@@ -107,9 +107,20 @@
              $("top_nav_ul").fadeIn(1000);
          });
          /*登录*/
-         $(".top_list a").click(function () {
-             $(".member").slideToggle(500);
+         $(".top_list a").on("click", function(e){
+             if($(".member").is(":hidden")){
+                 $(".member").slideDown();
+             }else{ $(".member").slideUp();
+             }
+             $(document).one("click", function(){
+                 $(".member").slideUp();
+             });
+             e.stopPropagation();
          });
+         $("..member").on("click", function(e){
+             e.stopPropagation();
+         });
+
      }));
  </script>
  </body>
