@@ -117,10 +117,6 @@
              });
              e.stopPropagation();
          });
-         $("..member").on("click", function(e){
-             e.stopPropagation();
-         });
-
      }));
  </script>
  </body>
