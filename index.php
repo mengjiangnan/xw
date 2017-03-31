@@ -65,7 +65,7 @@
                    <button class="search_btn" disabled="disabled"></button>
                    <input class="search_text" type="text" placeholder="搜索">
                    <span class="inner_input" id="inner_input_span">清除</span>
-                   <span class="close_btn"></span>
+                   <span class="close_btn_search"></span>
                </div>
            </form>
            <!--会员登录-->
@@ -74,7 +74,7 @@
                <ul>
                    <li>
                        <img alt="" src="./Image/other_img">
-                       <a>登录</a>
+                       <a class="theme-login">登录</a>
                    </li>
                    <li>
                        <img alt="" src="./Image/other_img">
@@ -84,6 +84,13 @@
            </div>
        </div>
    </div>
+   <div class="theme-popover">
+       <div class="theme-poptit">
+           <a title="关闭" class="close_pop">x</a>
+           <h3>xw登录</h3>
+       </div>
+   </div>
+   <div class="theme-popover-mask"></div>
  <script>
      /*input框内清除按钮更改*/
      var text = $(".search_text");
@@ -98,13 +105,11 @@
      /*搜索*/
      $(document).ready($(function () {
          $(".top_search_a").click(function () {
-             $("top_nav_ul").fadeOut(500);
              $(".search_main").fadeIn(1000);
              inner_input.hide();
          });
-         $(".search_main .close_btn").click(function () {
+         $(".search_main .close_btn_search").click(function () {
              $(".search_main").fadeOut(500);
-             $("top_nav_ul").fadeIn(1000);
          });
          /*登录*/
          $(".top_list a").on("click", function(e){
@@ -118,6 +123,17 @@
              e.stopPropagation();
          });
      }));
+     /*登录按钮弹出登录界面*/
+     $(document).ready(function () {
+         $(".theme-login").click(function () {
+             $(".theme-popover-mask").fadeIn(100);
+             $(".theme-popover").slideDown(200);
+         })
+         $(".theme-poptit .close").click(function () {
+             $(".theme-popover-mask").fadeOut(100);
+             $(".theme-popover").slideUp(200);
+         })
+     })
  </script>
  </body>
 </html>
