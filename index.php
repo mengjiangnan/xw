@@ -74,11 +74,11 @@
                <p>会员中心</p>
                <ul>
                    <li>
-                       <img alt="" src="./Image/other_img">
+                       <img alt="" src="./Image/other_img/member_login.svg" width="15">
                        <a class="theme-login">登录</a>
                    </li>
                    <li>
-                       <img alt="" src="./Image/other_img">
+                       <img alt="" src="./Image/other_img/member_regedit.svg" width="15">
                        <a>新会员注册</a>
                    </li>
                </ul>
