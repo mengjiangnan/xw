@@ -5,7 +5,7 @@
   $my_class->setTitle('xw');
   $xw_index_title = $my_class->getTitle();
 ?>
-<!Document>
+<!DOCTYPE HTML>
 <html>
  <head>
        <title>
@@ -26,7 +26,8 @@
            <ul class="top_nav_ul" id="nav_ul">
                <li class="top_logo" id="logo">
                    <a class="top_li_first" id="li_first_a">
-                       <img src="./Image/logo/xw_icon_test1.png">
+                       <!--<img src="./Image/logo/xw_icon_test1.png">-->
+                       <img src="./Image/logo/index_logo.svg" width="40" />
                    </a>
                </li>
                <li class="top_li_second" id="li_second">
@@ -41,7 +42,7 @@
                </li>
                <li class="top_li_four" id="li_four">
                    <a class="top_li_four_a" id="li_four_a">
-                       收藏夹
+                       我的收藏
                    </a>
                </li>
                <li class="top_li_five" id="li_five">
@@ -89,6 +90,26 @@
            <a title="关闭" class="close_pop">x</a>
            <h3>xw登录</h3>
        </div>
+       <div class="theme-popbod">
+           <form name="login_form" class="theme_signin" action="" method="post">
+               <ul>
+                   <li>
+                       <strong>
+                           用户名:
+                       </strong>
+                       <input name="user_name" class="user_name_input" type="text" size="20" value="test">
+                   </li>
+                   <li>
+                       <strong>
+                           密码：
+                       </strong>
+                   </li>
+                   <li>
+                       <input name="submit" class="btn_login" type="submit" value="登录">
+                   </li>
+               </ul>
+           </form>
+       </div>
    </div>
    <div class="theme-popover-mask"></div>
  <script>
@@ -129,7 +150,7 @@
              $(".theme-popover-mask").fadeIn(100);
              $(".theme-popover").slideDown(200);
          })
-         $(".theme-poptit .close").click(function () {
+         $(".theme-poptit .close_pop").click(function () {
              $(".theme-popover-mask").fadeOut(100);
              $(".theme-popover").slideUp(200);
          })

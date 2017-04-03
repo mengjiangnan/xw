@@ -83,7 +83,6 @@ body{
 .top_nav_ul .top_list,
 .top_nav_ul .close{
     height: 50px;
-    margin-top: 30px;
 }
 .top_nav_ul .top_search .top_search_a,
 .top_nav_ul .top_list a{
@@ -132,7 +131,7 @@ body{
     cursor: pointer;
 }
 .search_main .search_btn:hover{
-    background: url(../Image/other_img/search1.png) no-repeat center center;
+    background: url("../Image/other_img/search1.png") no-repeat center center;
 }
 .search_main input.search_text{
     height: 100%;
@@ -141,13 +140,13 @@ body{
     color: #fff;
 }
 .search_main .close_btn_search{
-    background: url(../Image/other_img/close.png) no-repeat center;
+    background: url("../Image/other_img/close.png") no-repeat center;
     position: absolute;
     top: 0;
     right: -198px;
 }
 .search_main .close_btn_search:hover{
-    background:url(../Image/other_img/close1.png) no-repeat center;
+    background:url("../Image/other_img/close1.png") no-repeat center;
 }
 .search_main .inner_input{
     display: none;
@@ -161,7 +160,7 @@ body{
     display: none;
     width: 200px;
     height: 130px;
-    background: url(../Image/other_img/huiyuan.png) no-repeat;
+    background: url("../Image/other_img/huiyuan.png") no-repeat;
     background-size:100% 100%;
     position: absolute;
     right: 342px;
@@ -226,7 +225,7 @@ body{
     color:#999;
     padding:5px;
     margin:-2px -5px -5px;
-    font: bold 14px/14px simsun;
+    font: bold 18px/18px simsun;
     text-shadow:0px 1px 0px #ddd;
     cursor: pointer;
 }
@@ -241,4 +240,25 @@ body{
     background: #000;
     opacity: 0.4;
     display: none;
+}
+.theme-popbod{
+    padding: 80px 60px 40px;
+}
+.theme_signin{
+    margin: -50px -20px -50px 90px;
+}
+.btn_login{
+    height: 29px;
+    font-weight: bold;
+    padding: 0 12px;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    border-color: #3079ED;
+    color: #f3f7fc;
+    background-color: #4D90FE;
+}
+.btn_login:hover{
+    border-color: #2F5BB7;
+    color: #f3f7fc;
+    background-color: #3079ED;
 }
