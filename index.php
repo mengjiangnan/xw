@@ -92,23 +92,21 @@
        </div>
        <div class="theme-popbod">
            <form name="login_form" class="theme_signin" action="" method="post">
-               <ul>
-                   <li>
-                       <strong class="user_name_strong">
-                           用户名:
-                       </strong>
-                       <input name="user_name" class="user_name_input" type="text" size="20" value="test">
-                   </li>
-                   <li>
-                       <strong class="user_pwd_strong">
-                           密码：
-                       </strong>
-                       <input name="user_pwd" class="user_pwd_input" type="password" size="20" value="test">
-                   </li>
-                   <li>
-                       <input name="submit" class="btn_login" type="submit" value="登录">
-                   </li>
-               </ul>
+               <div class="theme-inner">
+                  <ul>
+                      <li>
+                        <strong class="user_name_strong">用户名：</strong>
+                        <input name="user_name" class="user_input" type="text" size="20" value="test">
+                      </li>
+                      <li>
+                         <strong class="user_pwd_strong">密码：</strong>
+                         <input name="user_pwd" class="user_input" type="password" size="20" value="test">
+                      </li>
+                      <li>
+                         <input name="submit" class="btn_login" type="submit" value="登录">
+                      </li>
+                  </ul>
+               </div>
            </form>
        </div>
    </div>

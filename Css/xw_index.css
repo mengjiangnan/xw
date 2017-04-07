@@ -31,28 +31,24 @@ body{
     font-family:"微软雅黑";
 }
 /*公共头部样式*/
-.user_name_input {
-    border: solid 1px #d2d2d2;
-    border-radius: 2px;
-    height: 21px;
-    line-height: 21px;
+.theme-inner li{
+    padding-left: 80px;
     margin-bottom: 15px;
 }
-.user_pwd_input {
+.theme-inner li strong{
+    float: left;
+    margin-left: -80px;
+    width: 80px;
+    text-align: right;
+    line-height: 32px;
+}
+.user_input{
     border: solid 1px #d2d2d2;
     border-radius: 2px;
+    padding: 4px 6px;
     height: 21px;
     line-height: 21px;
-    margin-bottom: 15px;
-}
-.user_name_input::-ms-clear{
-    display: block;
-}
-.user_name_strong{
-    font-size: 14px;
-}
-.user_pwd_strong{
-    font-size: 14px;
+    width: 180px;
 }
 .top_nav{
     width: 100%;
@@ -274,6 +270,8 @@ body{
 }
 .theme_signin{
     margin: -50px -20px -50px 90px;
+    text-align: left;
+    font-size: 14px;
 }
 .btn_login{
     height: 29px;
