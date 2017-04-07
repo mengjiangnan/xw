@@ -32,12 +32,11 @@ body{
 }
 /*公共头部样式*/
 .theme-inner li{
-    padding-left: 80px;
     margin-bottom: 15px;
 }
 .theme-inner li strong{
     float: left;
-    margin-left: -80px;
+    margin-left: -150px;
     width: 80px;
     text-align: right;
     line-height: 32px;
@@ -49,6 +48,10 @@ body{
     height: 21px;
     line-height: 21px;
     width: 180px;
+    margin-left: -60px;
+}
+.user_input::-ms-clear{
+    display: block;
 }
 .top_nav{
     width: 100%;
@@ -227,9 +230,9 @@ body{
     position:fixed;
     top: 50%;
     left:50%;
-    width:660px;
+    width:360px;
     height: 360px;
-    margin: -180px 0 0 -330px;
+    margin: -180px 0 0 -180px;
     border-radius: 5px;
     border:solid 2px #666;
     background-color: #fff;
@@ -269,13 +272,15 @@ body{
     padding: 80px 60px 40px;
 }
 .theme_signin{
-    margin: -50px -20px -50px 90px;
+    margin: 0 -20px -50px 90px;
     text-align: left;
     font-size: 14px;
 }
 .btn_login{
     height: 29px;
+    width: 265px;
     font-weight: bold;
+    margin-left: -130px;
     padding: 0 12px;
     border: 1px solid #ddd;
     border-radius: 2px;
