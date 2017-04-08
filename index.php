@@ -91,19 +91,20 @@
            <h3>xw登录</h3>
        </div>
        <div class="theme-popbod">
-           <form name="login_form" class="theme_signin" action="" method="post">
+           <div class="message">123</div>
+           <form name="login_form" id="login_form_id" class="theme_signin" action="" method="post">
                <div class="theme-inner">
                   <ul>
                       <li>
-                        <strong class="user_name_strong">用户名：</strong>
-                        <input name="user_name" class="user_input" type="text" size="20" value="test">
+                        <label class="user_name_strong">用户名：</label>
+                        <input name="user_name" class="user_input" id="user_name_id" type="text" size="20" value="test">
                       </li>
                       <li>
-                         <strong class="user_pwd_strong">密码：</strong>
-                         <input name="user_pwd" class="user_input" type="password" size="20" value="test">
+                         <label class="user_pwd_strong">密码：</label>
+                         <input name="user_pwd" class="user_input" id="user_pwd_id" type="password" size="20" value="test">
                       </li>
                       <li>
-                         <input name="submit" class="btn_login" type="submit" value="登录">
+                         <input name="submit" class="btn_login" id="submit_id" type="submit" value="登录">
                       </li>
                   </ul>
                </div>
@@ -154,6 +155,13 @@
              $(".theme-popover").slideUp(200);
          })
      })
+     /*test*/
+     $(document).ready(function () {
+         $('#submit_id').click(function (e) {
+             alert($('#user_name_id').attr('value'));
+             return e.preventDefault();
+         });
+     });
  </script>
  </body>
 </html>

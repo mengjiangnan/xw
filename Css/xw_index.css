@@ -34,7 +34,7 @@ body{
 .theme-inner li{
     margin-bottom: 15px;
 }
-.theme-inner li strong{
+.theme-inner li label{
     float: left;
     margin-left: -120px;
     width: 80px;
@@ -269,7 +269,7 @@ body{
     display: none;
 }
 .theme-popbod{
-    padding: 80px 60px 40px;
+    padding: 30px 60px 40px;
 }
 .theme_signin{
     margin: 0 -20px -50px 90px;
@@ -293,4 +293,10 @@ body{
     border-color: #2F5BB7;
     color: #f3f7fc;
     background-color: #3079ED;
+}
+.message{
+    width: 150px;
+    height: 21px;
+    margin-bottom: 30px;
+    color: orangered;
 }
