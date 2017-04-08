@@ -36,7 +36,7 @@ body{
 }
 .theme-inner li strong{
     float: left;
-    margin-left: -150px;
+    margin-left: -120px;
     width: 80px;
     text-align: right;
     line-height: 32px;
@@ -48,7 +48,7 @@ body{
     height: 21px;
     line-height: 21px;
     width: 180px;
-    margin-left: -60px;
+    margin-left: -33px;
 }
 .user_input::-ms-clear{
     display: block;
@@ -277,10 +277,11 @@ body{
     font-size: 14px;
 }
 .btn_login{
-    height: 29px;
+    height: 32px;
     width: 265px;
     font-weight: bold;
-    margin-left: -130px;
+    margin-left: -103px;
+    margin-top: 10px;
     padding: 0 12px;
     border: 1px solid #ddd;
     border-radius: 2px;
