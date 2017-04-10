@@ -161,7 +161,7 @@
              var name = ($(event.target).attr('id')=='submit_id');
              $('#message_id').slideUp('fast');
              $.post('service.php',$('#login_form_id').serialize()+'&active='+$(event.target).attr('id'),function (data) {
-                 var code = $data[0].nodeName.toLowerCase();
+                 var code = $(data)[0].nodeName.toLowerCase();
                  $('#message_id').removeClass('error');
                  $('#message_id').removeClass('success');
                  $('#message_id').addClass(code);
