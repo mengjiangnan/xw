@@ -91,7 +91,7 @@
            <h3>xw登录</h3>
        </div>
        <div class="theme-popbod">
-           <div class="message" id="message_id">123</div>
+           <div class="message" id="message_id"></div>
            <form name="login_form" id="login_form_id" class="theme_signin" action="" method="post">
                <div class="theme-inner">
                   <ul>
@@ -158,9 +158,21 @@
      /*test*/
      $(document).ready(function () {
          $('#submit_id').click(function (e) {
-             var name = ($(event.target).attr('id')=='user_name_id');
+             var name = ($(event.target).attr('id')=='submit_id');
              $('#message_id').slideUp('fast');
-             $.post('service.php');
+             $.post('service.php',$('#login_form_id').serialize()+'&active='+$(event.target).attr('id'),function (data) {
+                 var code = $data[0].nodeName.toLowerCase();
+                 $('#message_id').removeClass('error');
+                 $('#message_id').removeClass('success');
+                 $('#message_id').addClass(code);
+                 if (code == 'success'){
+                     $('#message_id').html(name + 'was successful.');
+                 }
+                 else if (code == 'error'){
+                     $('#message_id').html('An error occurred, please try again.');
+                 }
+                $('#message_id').slideDown('fast');
+             });
              return e.preventDefault();
          });
      });

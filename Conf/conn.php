@@ -8,7 +8,7 @@
 
 $dbms = 'mysql'; //数据库类型
 $host = 'localhost'; //数据库主机名称
-$dbname = 'world';  //使用的数据库
+$dbname = 'xw';  //使用的数据库
 $user = 'root'; //数据库连接用户名
 $password = 'a019243a'; //数据库连接密码
 $dbport = '3306';
