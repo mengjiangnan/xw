@@ -91,7 +91,7 @@
            <h3>xw登录</h3>
        </div>
        <div class="theme-popbod">
-           <div class="message">123</div>
+           <div class="message" id="message_id">123</div>
            <form name="login_form" id="login_form_id" class="theme_signin" action="" method="post">
                <div class="theme-inner">
                   <ul>
@@ -158,7 +158,9 @@
      /*test*/
      $(document).ready(function () {
          $('#submit_id').click(function (e) {
-             alert($('#user_name_id').attr('value'));
+             var name = ($(event.target).attr('id')=='user_name_id');
+             $('#message_id').slideUp('fast');
+             $.post('service.php');
              return e.preventDefault();
          });
      });
