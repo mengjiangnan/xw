@@ -169,7 +169,7 @@
                      $('#message_id').html(name + 'was successful.');
                  }
                  else if (code == 'error'){
-                     $('#message_id').html('An error occurred, please try again.');
+                     $('#message_id').html('用户名或密码错误!');
                  }
                 $('#message_id').slideDown('fast');
              });
