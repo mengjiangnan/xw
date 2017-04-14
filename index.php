@@ -97,11 +97,11 @@
                   <ul>
                       <li>
                         <label class="user_name_strong">用户名：</label>
-                        <input name="user_name" class="user_input" id="user_name_id" type="text" size="20" value="test">
+                        <input name="user_name" class="user_input" id="user_name_id" type="text" size="20" value="">
                       </li>
                       <li>
                          <label class="user_pwd_strong">密码：</label>
-                         <input name="user_pwd" class="user_input" id="user_pwd_id" type="password" size="20" value="test">
+                         <input name="user_pwd" class="user_input" id="user_pwd_id" type="password" size="20" value="">
                       </li>
                       <li>
                          <input name="submit" class="btn_login" id="submit_id" type="submit" value="登录">
@@ -158,20 +158,18 @@
      /*test*/
      $(document).ready(function () {
          $('#submit_id').click(function (e) {
-             var name = ($(event.target).attr('id')=='submit_id');
-             $('#message_id').slideUp('fast');
+             var name = '登录';
              $.post('service.php',$('#login_form_id').serialize()+'&active='+$(event.target).attr('id'),function (data) {
                  var code = $(data)[0].nodeName.toLowerCase();
                  $('#message_id').removeClass('error');
                  $('#message_id').removeClass('success');
                  $('#message_id').addClass(code);
                  if (code == 'success'){
-                     $('#message_id').html(name + 'was successful.');
+                     $('#message_id').html(name + '成功！');
                  }
                  else if (code == 'error'){
                      $('#message_id').html('用户名或密码错误!');
                  }
-                $('#message_id').slideDown('fast');
              });
              return e.preventDefault();
          });
