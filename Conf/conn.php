@@ -15,7 +15,7 @@ $dbport = '3306';
 $dsn = "$dbms:host=$host;dbname=$dbname;port=$dbport";
 
    try{
-       $dbh = new PDO($dsn, $user, $password, array(PDO::ATTR_PERSISTENT => true)); //初始化一个pdo对象
+       $dbh = new PDO($dsn, $user, $password, array(PDO::ATTR_PERSISTENT => true)); //初始化一个pdo对象,数据库持久连接。
    }
    catch(PDOException $e){
        echo 'Connection failed: '.$e->getMessage(); //打印数据库连接异常信息

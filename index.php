@@ -97,11 +97,11 @@
                   <ul>
                       <li>
                         <label class="user_name_strong">用户名：</label>
-                        <input name="user_name" class="user_input" id="user_name_id" type="text" size="20" value="">
+                        <input name="user_name" class="user_input" id="user_name_id" type="text" size="20" value="test" >
                       </li>
                       <li>
                          <label class="user_pwd_strong">密码：</label>
-                         <input name="user_pwd" class="user_input" id="user_pwd_id" type="password" size="20" value="">
+                         <input name="user_pwd" class="user_input" id="user_pwd_id" type="password" size="20" value="test" >
                       </li>
                       <li>
                          <input name="submit" class="btn_login" id="submit_id" type="submit" value="登录">
