@@ -109,6 +109,7 @@
                   </ul>
                </div>
            </form>
+           <div class="barcode-img-button"></div>
        </div>
    </div>
    <div class="theme-popover-mask"></div>
@@ -136,6 +137,8 @@
          $(".top_list a").on("click", function(e){
              if($(".member").is(":hidden")){
                  $(".member").slideDown();
+                 //初始化message内容为空
+                 $('#message_id').html('');
              }else{ $(".member").slideUp();
              }
              $(document).one("click", function(){
@@ -155,7 +158,7 @@
              $(".theme-popover").slideUp(200);
          })
      })
-     /*test*/
+     /*登录提交*/
      $(document).ready(function () {
          $('#submit_id').click(function (e) {
              var name = '登录';
