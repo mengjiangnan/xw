@@ -87,7 +87,7 @@
    </div>
    <div class="theme-popover">
        <div class="theme-poptit">
-           <a title="关闭" class="close_pop">x</a>
+           <a title="close" class="close_pop">x</a>
            <h3>xw登录</h3>
        </div>
        <div class="theme-popbod">
