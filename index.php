@@ -177,6 +177,34 @@
              return e.preventDefault();
          });
      });
+     /*登录框居中*/
+     function tc_center() {
+         var _top = ($(window).height()-$(".theme-popover").height())/2;
+         var _left = ($(window).width()-$(".theme-popover").width())/2;
+         $(".theme-popover").css({top:_top,left:_left});
+     }
+     $(window).resize(function () {
+         tc_center();
+     });
+     /*登录框可拖动*/
+     $(document).ready(function () {
+         $(".theme-poptit").mousedown(function (e) {
+             $(this).css("cursor","move");
+             var offset = $(this).offset();
+             var x = e.pageX - offset.left;
+             var y = e.pageY - offset.top;
+             $(document).bind("mousemove",function (ev) {
+                 $(".theme-popover").stop();
+                 var _x = ev.pageX - x;
+                 var _y = ev.pageY - y;
+                 $(".theme-popover").animate({left:_x+"px",top:_y+"px"},10);
+             });
+         });
+         $(document).mouseup(function () {
+            $(".theme-popover").css("cursor","default");
+            $(this).unbind("mousemove");
+         });
+     });
  </script>
  </body>
 </html>
