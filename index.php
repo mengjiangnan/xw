@@ -157,7 +157,7 @@
              $(".theme-popover-mask").fadeOut(100);
              $(".theme-popover").slideUp(200);
          })
-     })
+     });
      /*登录提交*/
      $(document).ready(function () {
          $('#submit_id').click(function (e) {
@@ -197,7 +197,10 @@
                  $(".theme-popover").stop();
                  var _x = ev.pageX - x;
                  var _y = ev.pageY - y;
-                 $(".theme-popover").animate({left:_x+"px",top:_y+"px"},10);
+                 $(".theme-popover").animate({
+                     left:_x+"px",
+                     top:_y+"px"},
+                     10);
              });
          });
          $(document).mouseup(function () {
