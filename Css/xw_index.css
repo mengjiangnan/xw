@@ -316,3 +316,7 @@ body{
     cursor: pointer;
     background: url("../Image/other_img/pc_button.png")no-repeat 0 0;
 }
+.barcode-img-login{
+    padding: 0 60px 40px;
+    display: none;
+}

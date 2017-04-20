@@ -113,6 +113,12 @@
            <div class="barcode-img-button">
                <a class="barcode-img-button-a"></a>
            </div>
+           <!--二维码登录页面-->
+           <div class="barcode-img-login">
+               <a class="barcode-img-a">
+                   <img src="./Image/other_img/erweima.jpg">
+               </a>
+           </div>
        </div>
    </div>
    <div class="theme-popover-mask"></div>
@@ -216,9 +222,11 @@
          if ($(".barcode-img-button-a").attr("class")==="barcode-img-button-a"){
              $(".barcode-img-button-a").attr("class","normal-img-button-a");
              $(".theme_signin").css("display","none");
+             $(".barcode-img-login").css("display","block");
          }else{
              $(".normal-img-button-a").attr("class","barcode-img-button-a");
              $(".theme_signin").css("display","block");
+             $(".barcode-img-login").css("display","none");
          }
      });
  </script>
