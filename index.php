@@ -215,7 +215,10 @@
      $(".barcode-img-button").click(function () {
          if ($(".barcode-img-button-a").attr("class")==="barcode-img-button-a"){
              $(".barcode-img-button-a").attr("class","normal-img-button-a");
-             $(".theme-popbod").animate({display:'-265px'},200);
+             /*$(".theme-popbod").animate({top:'-265px'},200);*/
+         }else{
+             $(".normal-img-button-a").attr("class","barcode-img-button-a");
+             /*$(".theme-popbod").animate({top:'0'},200);*/
          }
      });
  </script>
