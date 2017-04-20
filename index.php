@@ -109,7 +109,10 @@
                   </ul>
                </div>
            </form>
-           <div class="barcode-img-button"></div>
+           <!--右下角二维码登录按钮-->
+           <div class="barcode-img-button">
+               <a class="barcode-img-button-a"></a>
+           </div>
        </div>
    </div>
    <div class="theme-popover-mask"></div>
@@ -207,6 +210,13 @@
             $(".theme-popover").css("cursor","default");
             $(this).unbind("mousemove");
          });
+     });
+     /*二维码登录与普通登录按钮切换*/
+     $(".barcode-img-button").click(function () {
+         if ($(".barcode-img-button-a").attr("class")==="barcode-img-button-a"){
+             $(".barcode-img-button-a").attr("class","normal-img-button-a");
+             $(".theme-popbod").animate({display:'-265px'},200);
+         }
      });
  </script>
  </body>
