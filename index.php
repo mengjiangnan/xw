@@ -85,7 +85,8 @@
            </div>
        </div>
    </div>
-   <div class="theme-popover">
+   <div class="outside-theme-popover">
+      <div class="theme-popover">
        <div class="theme-poptit">
            <a title="close" class="close_pop">x</a>
            <h3>xw登录</h3>
@@ -128,6 +129,7 @@
            </div>
        </div>
    </div>
+   </div>
    <div class="theme-popover-mask"></div>
  <script>
      /*input框内清除按钮更改*/
@@ -167,11 +169,11 @@
      $(document).ready(function () {
          $(".theme-login").click(function () {
              $(".theme-popover-mask").fadeIn(100);
-             $(".theme-popover").slideDown(200);
+             $(".outside-theme-popover").slideDown(200);
          })
          $(".theme-poptit .close_pop").click(function () {
              $(".theme-popover-mask").fadeOut(100);
-             $(".theme-popover").slideUp(200);
+             $(".outside-theme-popover").slideUp(200);
          })
      });
      /*登录提交*/
@@ -195,9 +197,9 @@
      });
      /*登录框居中*/
      function tc_center() {
-         var _top = ($(window).height()-$(".theme-popover").height())/2;
-         var _left = ($(window).width()-$(".theme-popover").width())/2;
-         $(".theme-popover").css({top:_top,left:_left});
+         var _top = ($(window).height()-$(".outside-theme-popover").height())/2;
+         var _left = ($(window).width()-$(".outside-theme-popover").width())/2;
+         $(".outside-theme-popover").css({top:_top,left:_left});
      }
      $(window).resize(function () {
          tc_center();
@@ -210,17 +212,17 @@
              var x = e.pageX - offset.left;
              var y = e.pageY - offset.top;
              $(document).bind("mousemove",function (ev) {
-                 $(".theme-popover").stop();
+                 $(".outside-theme-popover").stop();
                  var _x = ev.pageX - x;
                  var _y = ev.pageY - y;
-                 $(".theme-popover").animate({
+                 $(".outside-theme-popover").animate({
                      left:_x+"px",
                      top:_y+"px"},
                      10);
              });
          });
          $(document).mouseup(function () {
-            $(".theme-popover").css("cursor","default");
+            $(".outside-theme-popover").css("cursor","default");
             $(this).unbind("mousemove");
          });
      });
