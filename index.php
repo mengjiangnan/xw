@@ -106,6 +106,13 @@
                       <li>
                          <input name="submit" class="btn_login" id="submit_id" type="submit" value="登录">
                       </li>
+                      <li>
+                          <div class="quick-register">
+                             <a class="quick-register-a">
+                              快速注册
+                             </a>
+                          </div>
+                      </li>
                   </ul>
                </div>
            </form>
