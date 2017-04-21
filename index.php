@@ -170,11 +170,11 @@
          $(".theme-login").click(function () {
              $(".theme-popover-mask").fadeIn(100);
              $(".outside-theme-popover").slideDown(200);
-         })
+         });
          $(".theme-poptit .close_pop").click(function () {
              $(".theme-popover-mask").fadeOut(100);
              $(".outside-theme-popover").slideUp(200);
-         })
+         });
      });
      /*登录提交*/
      $(document).ready(function () {
