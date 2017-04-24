@@ -157,7 +157,7 @@
     $(document).ready(function () {
         $('#submit_id').click(function (e) {
             var name = '登录';
-            $.post('service.php',$('#login_form_id').serialize()+'&active='+$(event.target).attr('id'),function (data) {
+            $.post("./Ajax/xw_index_ajax_verify.php",$('#login_form_id').serialize()+'&active='+$(event.target).attr('id'),function (data) {
                 var code = $(data)[0].nodeName.toLowerCase();
                 $('#message_id').removeClass('error');
                 $('#message_id').removeClass('success');

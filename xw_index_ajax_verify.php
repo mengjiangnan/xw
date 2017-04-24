@@ -2,7 +2,7 @@
 /*
  * 验证用户
 */
-include_once dirname (__FILE__).'/Conf/conn.php'; //引入数据库连接文件
+include_once dirname(__FILE__) . '/Conf/conn.php'; //引入数据库连接文件
 
 if (isset($_POST['user_name'],$_POST['user_pwd'])){
       extract($_POST);
