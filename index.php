@@ -109,7 +109,7 @@
                       </li>
                       <li>
                           <div class="quick-register">
-                             <a class="quick-register-a">
+                             <a class="quick-register-a" href="register.php">
                               快速注册
                              </a>
                           </div>
