@@ -21,7 +21,7 @@
    </head>
    <body>
    <?php
-   include_once ("header.php");
+   include_once ("./Common/xw_index_header.php");
    ?>
    </body>
 </html>

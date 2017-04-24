@@ -21,7 +21,7 @@
    </head>
  <body>
    <?php
-     include_once ("header.php"); //引入头部通用导航样式
+     include_once ("./Common/xw_index_header.php"); //引入头部通用导航样式
    ?>
  </body>
 </html>
