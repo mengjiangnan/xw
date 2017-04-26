@@ -40,7 +40,10 @@
                    <label class="form_user_name_label">
                        用户名
                    </label>
+                   <!--用户名input框-->
                    <input name="form_user_name_inputname" class="form_user_name_input form_user_name_input_focus" type="text" placeholder="请设置用户名">
+                   <!--用户名验证提示-->
+                   <span class="form_user_name_span"></span>
                </p>
            </form>
        </div>

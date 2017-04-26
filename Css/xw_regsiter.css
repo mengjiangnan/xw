@@ -49,3 +49,11 @@
     color: #666;
     transition: .3s;
 }
+.form_user_name_span{
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 12px;
+    left: 398px;
+    cursor:pointer;
+}
