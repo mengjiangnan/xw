@@ -1,0 +1,51 @@
+#register_content{
+    width: 980px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.register_left{
+    position: relative;
+    width: 720px;
+    overflow: hidden;
+}
+.pass_general_error_content{
+    color: orangered;
+    display: block;
+    height: 40px;
+    font-size: 12px;
+    line-height: 40px;
+}
+#hidden_fields{
+    display: none;
+}
+.form_item_user_name{
+    position: relative;
+    clear: both;
+    margin-bottom: 20px;
+    zoom: 1;
+}
+.form_user_name_label{
+    display: block;
+    float: left;
+    height: 42px;
+    width: 65px;
+    margin-right: 10px;
+    line-height: 42px;
+    font-size: 14px;
+    color: #666;
+    font-weight: 700;
+    text-align: right;
+}
+.form_user_name_input{
+    display: block;
+    position: relative;
+    float: left;
+    height: 16px;
+    width: 328px;
+    padding: 11px 10px;
+    margin-right: 10px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    color: #666;
+    transition: .3s;
+}
