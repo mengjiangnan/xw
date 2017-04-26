@@ -23,5 +23,13 @@
    <?php
    include_once ("./Common/xw_index_header.php");
    ?>
+   <!--注册-->
+   <div id="regedit_content">
+       <form id="register_form" method="post">
+           <p class="pass_general_error_wrapper">
+               <span class="pass_general_error_content"></span>
+           </p>
+       </form>
+   </div>
    </body>
 </html>
