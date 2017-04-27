@@ -49,11 +49,24 @@
     color: #666;
     transition: .3s;
 }
-.form_user_name_span{
+.form_user_name_clear_btn_span{
     position: absolute;
     width: 16px;
     height: 16px;
+    background:url("../Image/other_img/reg_icons.png") -32px -24px no-repeat;
     top: 12px;
     left: 398px;
     cursor:pointer;
+}
+.form_user_name_notice_span{
+    display: none;
+    float: left;
+    position: relative;
+    width: 250px;
+    top: 12px;
+    color: #fc4343;
+    height: 16px;
+    line-height: 14px;
+    padding-left: 20px;
+    background: url("../Image/other_img/reg_icons.png") 0 0 no-repeat;
 }

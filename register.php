@@ -42,8 +42,10 @@
                    </label>
                    <!--用户名input框-->
                    <input name="form_user_name_inputname" class="form_user_name_input form_user_name_input_focus" type="text" placeholder="请设置用户名">
-                   <!--用户名验证提示-->
-                   <span class="form_user_name_span"></span>
+                   <!--显示清除图标-->
+                   <span class="form_user_name_clear_btn_span"></span>
+                   <!--右侧提示信息-->
+                   <span class="form_user_name_notice_span">用户名仅支持中英文、数字和下划线,且不能为纯数字</span>
                </p>
            </form>
        </div>
