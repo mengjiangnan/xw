@@ -109,7 +109,7 @@
 </div>
 <div class="theme-popover-mask"></div>
 <script>
-    /*input框内清除按钮更改*/
+    /*input框内清除按钮更改
     var text = $(".search_text");
     var inner_input = $(".inner_input");
     text.focus(function () {
@@ -118,11 +118,26 @@
     inner_input.click(function () {
         text.val('');
         inner_input.hide();
+    });*/
+    var text = $(".search_text");
+    var inner_input = $(".inner_input");
+    text.bind("input propertychange",function () {
+        if(text.val().length!==0){
+            inner_input.show();
+        }
     });
+    inner_input.click(function () {
+        text.val('');
+        inner_input.hide();
+    });
+
     /*搜索*/
     $(document).ready($(function () {
         $(".top_search_a").click(function () {
             $(".search_main").fadeIn(1000);
+            //初始化input框内的值为空
+            text.val('');
+            //初始化清除按钮隐藏
             inner_input.hide();
         });
         $(".search_main .close_btn_search").click(function () {

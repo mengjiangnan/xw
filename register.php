@@ -50,5 +50,17 @@
            </form>
        </div>
    </div>
+   <script>
+   /*input框内清除按钮更改
+   var text = $(".form_user_name_input");
+   var inner_input = $(".form_user_name_clear_btn_span");
+   text.focus(function () {
+   inner_input.show();
+   });
+   inner_input.click(function () {
+   text.val('');
+   inner_input.hide();
+   });*/
+   </script>
    </body>
 </html>
