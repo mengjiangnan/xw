@@ -50,6 +50,7 @@
     transition: .3s;
 }
 .form_user_name_clear_btn_span{
+    display: none;
     position: absolute;
     width: 16px;
     height: 16px;
