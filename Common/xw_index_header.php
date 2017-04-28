@@ -109,16 +109,7 @@
 </div>
 <div class="theme-popover-mask"></div>
 <script>
-    /*input框内清除按钮更改
-    var text = $(".search_text");
-    var inner_input = $(".inner_input");
-    text.focus(function () {
-        inner_input.show();
-    });
-    inner_input.click(function () {
-        text.val('');
-        inner_input.hide();
-    });*/
+     /*input框内清除按钮更改*/
     var text = $(".search_text");
     var inner_input = $(".inner_input");
     text.bind("input propertychange",function () {
