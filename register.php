@@ -51,7 +51,7 @@
        </div>
    </div>
    <script>
-   /*input框内清除按钮更改*/
+   /*焦点在input框内时边框颜色变为蓝色，当焦点离开input框时，边框颜色还原为灰色*/
    var text = $(".form_user_name_input");
    var inner_input = $(".form_user_name_clear_btn_span");
    text.focus(function () {
@@ -59,11 +59,13 @@
    }).blur(function () {
        text.css("border-color","#ddd");
    });
+   /*当input框内有值的时候，清除按钮显示*/
    text.bind("input propertychange",function () {
        if(text.val().length!==0){
            inner_input.show();
        }
    });
+   /*input框内清除按钮点击后，input框内容为空，清除按钮隐藏*/
    inner_input.click(function () {
        text.val('');
        inner_input.hide();
