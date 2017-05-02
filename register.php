@@ -26,7 +26,7 @@
    include_once ("./Common/xw_index_header.php");
    ?>
    <!--注册-->
-   <div id="register_content">
+   <div class="register_content_div" id="register_content">
        <div class="register_left">
            <form id="register_form" method="post">
                <p class="pass_general_error_wrapper">
@@ -41,7 +41,7 @@
                        用户名
                    </label>
                    <!--用户名input框-->
-                   <input name="form_user_name_inputname" class="form_user_name_input form_user_name_input_focus" type="text" placeholder="请设置用户名">
+                   <input name="form_user_name_inputname" class="form_user_name_input" type="text" placeholder="请设置用户名">
                    <!--显示清除图标-->
                    <span class="form_user_name_clear_btn_span"></span>
                    <!--右侧提示信息-->
@@ -54,6 +54,11 @@
    /*input框内清除按钮更改*/
    var text = $(".form_user_name_input");
    var inner_input = $(".form_user_name_clear_btn_span");
+   text.focus(function () {
+       text.css("border-color","#3079ED");
+   }).blur(function () {
+       text.css("border-color","#ddd");
+   });
    text.bind("input propertychange",function () {
        if(text.val().length!==0){
            inner_input.show();
