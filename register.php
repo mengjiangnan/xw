@@ -45,7 +45,7 @@
                    <!--显示清除图标-->
                    <span class="form_user_name_clear_btn_span"></span>
                    <!--右侧提示信息-->
-                   <span class="form_user_name_notice_span">用户名仅支持中英文、数字和下划线,且不能为纯数字</span>
+                   <span class="form_user_name_notice_span">用户名不能超过7个汉字或14个字符</span>
                </p>
            </form>
        </div>

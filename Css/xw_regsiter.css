@@ -60,7 +60,7 @@
     cursor:pointer;
 }
 .form_user_name_notice_span{
-    display: none;
+    /*display: none;*/
     float: left;
     position: relative;
     width: 250px;
@@ -69,5 +69,6 @@
     height: 16px;
     line-height: 14px;
     padding-left: 20px;
-    background: url("../Image/other_img/reg_icons.png") 0 0 no-repeat;
+    font-size: 12px;
+    /*background: url("../Image/other_img/reg_icons.png") 0 0 no-repeat;*/
 }
