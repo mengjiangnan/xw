@@ -63,12 +63,17 @@
    text.bind("input propertychange",function () {
        if(text.val().length!==0){
            inner_input.show();
+       }if(text.val().length>=14){
+           $(".form_user_name_notice_span").css("display","block");
+       }else {
+           $(".form_user_name_notice_span").css("display","none");
        }
    });
-   /*input框内清除按钮点击后，input框内容为空，清除按钮隐藏*/
+   /*input框内清除按钮点击后，input框内容为空，提示隐藏，清除按钮隐藏*/
    inner_input.click(function () {
        text.val('');
        inner_input.hide();
+       $(".form_user_name_notice_span").css("display","none");
    });
    </script>
    </body>
