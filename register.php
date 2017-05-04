@@ -44,8 +44,10 @@
                    <input name="form_user_name_inputname" class="form_user_name_input" type="text" placeholder="请设置用户名">
                    <!--显示清除图标-->
                    <span class="form_user_name_clear_btn_span"></span>
-                   <!--右侧提示信息-->
-                   <span class="form_user_name_notice_span">用户名不能超过7个汉字或14个字符</span>
+                   <!--右侧普通提示信息-->
+                   <span class="form_user_name_normal_notice_span">中英文均可，最长7个汉字或14个英文</span>
+                   <!--右侧错误提示信息-->
+                   <span class="form_user_name_error_notice_span">用户名不能超过7个汉字或14个字符</span>
                </p>
            </form>
        </div>
@@ -56,24 +58,27 @@
    var inner_input = $(".form_user_name_clear_btn_span");
    text.focus(function () {
        text.css("border-color","#3079ED");
+       $(".form_user_name_normal_notice_span").css("display","block");
    }).blur(function () {
        text.css("border-color","#ddd");
+       $(".form_user_name_normal_notice_span").css("display","none");
    });
    /*当input框内有值的时候，清除按钮显示*/
    text.bind("input propertychange",function () {
        if(text.val().length!==0){
            inner_input.show();
        }if(text.val().length>=14){
-           $(".form_user_name_notice_span").css("display","block");
+           $(".form_user_name_normal_notice_span").css("display","none");
+           $(".form_user_name_error_notice_span").css("display","block");
        }else {
-           $(".form_user_name_notice_span").css("display","none");
+           $(".form_user_name_error_notice_span").css("display","none");
        }
    });
    /*input框内清除按钮点击后，input框内容为空，提示隐藏，清除按钮隐藏*/
    inner_input.click(function () {
        text.val('');
        inner_input.hide();
-       $(".form_user_name_notice_span").css("display","none");
+       $(".form_user_name_error_notice_span").css("display","none");
    });
    </script>
    </body>

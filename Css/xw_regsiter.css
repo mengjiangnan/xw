@@ -59,8 +59,20 @@
     left: 398px;
     cursor:pointer;
 }
-.form_user_name_notice_span{
-    display: none;
+.form_user_name_normal_notice_span{
+    display:none;
+    float: left;
+    position: relative;
+    width: 250px;
+    top: 12px;
+    color: #7d7c81;
+    height: 16px;
+    line-height: 14px;
+    padding-left: 20px;
+    font-size: 12px;
+}
+.form_user_name_error_notice_span{
+    display:none;
     float: left;
     position: relative;
     width: 250px;
@@ -71,4 +83,7 @@
     padding-left: 20px;
     font-size: 12px;
     background: url("../Image/icon/err_small.png") 0 0 no-repeat;
+}
+.outside_form_user_name_notice_span{
+    /*display: block;*/
 }
