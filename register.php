@@ -79,6 +79,7 @@
        text.val('');
        inner_input.hide();
        $(".form_user_name_error_notice_span").css("display","none");
+       $(".form_user_name_normal_notice_span").css("display","none");
    });
    </script>
    </body>
