@@ -74,6 +74,8 @@
                    $(".form_user_name_repeat_notice_span").css("display","block");
                }else if(code=='error'){
                    $(".form_user_name_repeat_notice_span").css("display","none");
+               }else{
+                   $(".form_user_name_repeat_notice_span").css("display","none");
                }
            }
        );
