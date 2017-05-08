@@ -50,6 +50,8 @@
                    <span class="form_user_name_error_notice_span">用户名不能超过7个汉字或14个字符</span>
                    <!--右侧用户名重复提示信息-->
                    <span class="form_user_name_repeat_notice_span">此用户名太受欢迎,请更换一个</span>
+                   <!--右侧用户名可用提示信息-->
+                   <span class="form_user_name_success_notice_span"></span>
                </p>
            </form>
        </div>
@@ -61,6 +63,9 @@
    text.focus(function () {
        text.css("border-color","#3079ED");
        $(".form_user_name_normal_notice_span").css("display","block");
+       $(".form_user_name_error_notice_span").css("display","none");
+       $(".form_user_name_repeat_notice_span").css("display","none");
+       $(".form_user_name_success_notice_span").css("display","none");
    }).blur(function () {
        text.css("border-color","#ddd");
        $(".form_user_name_normal_notice_span").css("display","none");
@@ -74,6 +79,7 @@
                    $(".form_user_name_repeat_notice_span").css("display","block");
                }else if(code=='error'){
                    $(".form_user_name_repeat_notice_span").css("display","none");
+                   $(".form_user_name_success_notice_span").css("display","block");
                }else{
                    $(".form_user_name_repeat_notice_span").css("display","none");
                }
@@ -98,6 +104,7 @@
        $(".form_user_name_error_notice_span").css("display","none");
        $(".form_user_name_normal_notice_span").css("display","none");
        $(".form_user_name_repeat_notice_span").css("display","none");
+       $(".form_user_name_success_notice_span").css("display","none");
    });
    </script>
    </body>

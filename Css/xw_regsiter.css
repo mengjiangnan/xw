@@ -97,3 +97,16 @@
     font-size: 12px;
     background: url("../Image/icon/err_small.png") 0 0 no-repeat;
 }
+.form_user_name_success_notice_span{
+    display: none;
+    float: left;
+    position:relative;
+    width:250px;
+    top:12px;
+    color:#fc4343;
+    height:16px;
+    line-height:14px;
+    padding-left:20px;
+    font-size:12px;
+    background:url("../Image/icon/reg_icons.png") -80px 0 no-repeat;
+}
