@@ -41,13 +41,15 @@
                        用户名
                    </label>
                    <!--用户名input框-->
-                   <input name="form_user_name_inputname" class="form_user_name_input" type="text" placeholder="请设置用户名">
+                   <input name="form_user_name_inputname" id="form_user_name_input_id" class="form_user_name_input" type="text" placeholder="请设置用户名">
                    <!--显示清除图标-->
                    <span class="form_user_name_clear_btn_span"></span>
                    <!--右侧普通提示信息-->
                    <span class="form_user_name_normal_notice_span">中英文均可，最长7个汉字或14个英文</span>
                    <!--右侧错误提示信息-->
                    <span class="form_user_name_error_notice_span">用户名不能超过7个汉字或14个字符</span>
+                   <!--右侧用户名重复提示信息-->
+                   <span class="form_user_name_repeat_notice_span">此用户名太受欢迎,请更换一个</span>
                </p>
            </form>
        </div>
@@ -62,6 +64,19 @@
    }).blur(function () {
        text.css("border-color","#ddd");
        $(".form_user_name_normal_notice_span").css("display","none");
+       /*input框提交AJAX请求*/
+       $.post(
+           "./Ajax/xw_register_ajax_username_verify.php",
+           $('#form_user_name_input_id').serialize()+'&active='+$(event.target).attr('id'),
+           function (data) {
+               var code = $(data)[0].nodeName.toLowerCase();
+               if(code=='success'){
+                   $(".form_user_name_repeat_notice_span").css("display","block");
+               }else if(code=='error'){
+                   $(".form_user_name_repeat_notice_span").css("display","none");
+               }
+           }
+       );
    });
    /*当input框内有值的时候，清除按钮显示*/
    text.bind("input propertychange",function () {
@@ -80,6 +95,7 @@
        inner_input.hide();
        $(".form_user_name_error_notice_span").css("display","none");
        $(".form_user_name_normal_notice_span").css("display","none");
+       $(".form_user_name_repeat_notice_span").css("display","none");
    });
    </script>
    </body>

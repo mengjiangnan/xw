@@ -165,9 +165,6 @@
             var name = '登录';
             $.post("./Ajax/xw_index_ajax_login_verify.php",$('#login_form_id').serialize()+'&active='+$(event.target).attr('id'),function (data) {
                 var code = $(data)[0].nodeName.toLowerCase();
-                $('#message_id').removeClass('error');
-                $('#message_id').removeClass('success');
-                $('#message_id').addClass(code);
                 if (code == 'success'){
                     $('#message_id').html(name + '成功！');
                 }
