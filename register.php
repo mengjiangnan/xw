@@ -129,7 +129,7 @@
    /*点击radio选项后，input框中的值成为当前值，而且radio隐藏*/
    $("#pass_suggest_item_radio_01").click(function () {
        var test1=$('#pass_suggest_item_radio_01:radio:checked').val();
-       text.val(test1);
+       text.focus().val(test1);
    });
    </script>
    </body>
