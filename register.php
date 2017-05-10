@@ -56,19 +56,19 @@
                <div class="pass_suggest_name_div">
                    <p class="pass_suggest_item">
                        <label name="suggestName">
-                           <input name="suggestName" id="pass_suggest_item_radio_01" class="pass_suggest_item_radio" type="radio">
+                           <input name="suggestName" id="pass_suggest_item_radio_01" class="pass_suggest_item_radio" type="radio" value="123">
                            123
                        </label>
                    </p>
                    <p class="pass_suggest_item">
                        <label name="suggestName">
-                           <input name="suggestName" id="pass_suggest_item_radio_02" class="pass_suggest_item_radio" type="radio">
+                           <input name="suggestName" id="pass_suggest_item_radio_02" class="pass_suggest_item_radio" type="radio" value="456">
                            456
                        </label>
                    </p>
                    <p class="pass_suggest_item">
                        <label name="suggestName">
-                           <input name="suggestName" id="pass_suggest_item_radio_03" class="pass_suggest_item_radio" type="radio">
+                           <input name="suggestName" id="pass_suggest_item_radio_03" class="pass_suggest_item_radio" type="radio" value="789">
                            789
                        </label>
                    </p>
@@ -125,6 +125,11 @@
        $(".form_user_name_normal_notice_span").css("display","none");
        $(".form_user_name_repeat_notice_span").css("display","none");
        $(".form_user_name_success_notice_span").css("display","none");
+   });
+   /*点击radio选项后，input框中的值成为当前值，而且radio隐藏*/
+   $("#pass_suggest_item_radio_01").click(function () {
+       var test1=$('#pass_suggest_item_radio_01:radio:checked').val();
+       text.val(test1);
    });
    </script>
    </body>
