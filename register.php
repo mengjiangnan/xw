@@ -53,6 +53,23 @@
                    <!--右侧用户名可用提示信息-->
                    <span class="form_user_name_success_notice_span"></span>
                </p>
+               <div class="pass_suggest_name_div">
+                   <p class="pass_suggest_item">
+                       <label name="suggestName">
+                           <input name="suggestName" id="pass_suggest_item_radio_01" class="pass_suggest_item_radio" type="radio">
+                       </label>
+                   </p>
+                   <p class="pass_suggest_item">
+                       <label name="suggestName">
+                           <input name="suggestName" id="pass_suggest_item_radio_02" class="pass_suggest_item_radio" type="radio">
+                       </label>
+                   </p>
+                   <p class="pass_suggest_item">
+                       <label name="suggestName">
+                           <input name="suggestName" id="pass_suggest_item_radio_03" class="pass_suggest_item_radio" type="radio">
+                       </label>
+                   </p>
+               </div>
            </form>
        </div>
    </div>

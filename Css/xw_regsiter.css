@@ -110,3 +110,10 @@
     font-size:12px;
     background:url("../Image/icon/reg_icons.png") -80px 0 no-repeat;
 }
+.pass_suggest_name_div{
+    margin-top: 50px;
+    margin-left: 75px;
+}
+.pass_suggest_item label{
+    display: none;
+}
