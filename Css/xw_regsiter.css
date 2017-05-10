@@ -114,6 +114,21 @@
     margin-top: 50px;
     margin-left: 75px;
 }
+.pass_suggest_item label:hover{
+    background:url("../Image/icon/reg_icons.png") -80px -80px no-repeat;
+}
 .pass_suggest_item label{
-    display: none;
+    display: block;
+    height: 16px;
+    font-size: 14px;
+    line-height: 17px;
+    color: #666;
+    padding-left: 20px;
+    background:url("../Image/icon/reg_icons.png") -80px -96px no-repeat;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+.pass_suggest_item_radio{
+    vertical-align: middle;
+    opacity: 0;
 }

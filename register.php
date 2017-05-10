@@ -57,16 +57,19 @@
                    <p class="pass_suggest_item">
                        <label name="suggestName">
                            <input name="suggestName" id="pass_suggest_item_radio_01" class="pass_suggest_item_radio" type="radio">
+                           123
                        </label>
                    </p>
                    <p class="pass_suggest_item">
                        <label name="suggestName">
                            <input name="suggestName" id="pass_suggest_item_radio_02" class="pass_suggest_item_radio" type="radio">
+                           456
                        </label>
                    </p>
                    <p class="pass_suggest_item">
                        <label name="suggestName">
                            <input name="suggestName" id="pass_suggest_item_radio_03" class="pass_suggest_item_radio" type="radio">
+                           789
                        </label>
                    </p>
                </div>
