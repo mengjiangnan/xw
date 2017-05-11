@@ -50,6 +50,8 @@
                    <span class="form_user_name_error_notice_span">用户名不能超过7个汉字或14个字符</span>
                    <!--右侧用户名重复提示信息-->
                    <span class="form_user_name_repeat_notice_span">此用户名太受欢迎,请更换一个</span>
+                   <!--右侧用户名为纯数字时的提示信息-->
+                   <span class="form_user_name_isnumber_notice_span">用户名仅支持中英文、数字和下划线,且不能为纯数字</span>
                    <!--右侧用户名可用提示信息-->
                    <span class="form_user_name_success_notice_span"></span>
                </p>
@@ -108,7 +110,7 @@
                }
            );
        }else {
-           alert('是个数字');
+           $(".form_user_name_isnumber_notice_span").css("display","block");
        }
    });
    /*当input框内有值的时候，清除按钮显示*/
