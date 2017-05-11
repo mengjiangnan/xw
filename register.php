@@ -89,22 +89,27 @@
    }).blur(function () {
        text.css("border-color","#ddd");
        $(".form_user_name_normal_notice_span").css("display","none");
-       /*input框提交AJAX请求*/
-       $.post(
-           "./Ajax/xw_register_ajax_username_verify.php",
-           $('#form_user_name_input_id').serialize()+'&active='+$(event.target).attr('id'),
-           function (data) {
-               var code = $(data)[0].nodeName.toLowerCase();
-               if(code=='success'){
-                   $(".form_user_name_repeat_notice_span").css("display","block");
-               }else if(code=='error'){
-                   $(".form_user_name_repeat_notice_span").css("display","none");
-                   $(".form_user_name_success_notice_span").css("display","block");
-               }else{
-                   $(".form_user_name_repeat_notice_span").css("display","none");
+       if(isNaN(text.val())){
+           /*input框提交AJAX请求*/
+           $.post(
+               "./Ajax/xw_register_ajax_username_verify.php",
+               $('#form_user_name_input_id').serialize()+'&active='+$(event.target).attr('id'),
+               function (data) {
+                   var code = $(data)[0].nodeName.toLowerCase();
+                   if(code=='success'){
+                       $(".form_user_name_repeat_notice_span").css("display","block");
+                       $('.pass_suggest_name_div').css("display","block");
+                   }else if(code=='error'){
+                       $(".form_user_name_repeat_notice_span").css("display","none");
+                       $(".form_user_name_success_notice_span").css("display","block");
+                   }else{
+                       $(".form_user_name_repeat_notice_span").css("display","none");
+                   }
                }
-           }
-       );
+           );
+       }else {
+           alert('是个数字');
+       }
    });
    /*当input框内有值的时候，清除按钮显示*/
    text.bind("input propertychange",function () {

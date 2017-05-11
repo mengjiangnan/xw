@@ -111,6 +111,7 @@
     background:url("../Image/icon/reg_icons.png") -80px 0 no-repeat;
 }
 .pass_suggest_name_div{
+    display: none;
     margin-top: 50px;
     margin-left: 75px;
 }
