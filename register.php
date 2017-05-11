@@ -128,8 +128,19 @@
    });
    /*点击radio选项后，input框中的值成为当前值，而且radio隐藏*/
    $("#pass_suggest_item_radio_01").click(function () {
-       var test1=$('#pass_suggest_item_radio_01:radio:checked').val();
-       text.focus().val(test1);
+       var radio_one_val=$('#pass_suggest_item_radio_01:radio:checked').val();
+       text.focus().val(radio_one_val);
+       $('.pass_suggest_name_div').css("display","none");
+   });
+   $("#pass_suggest_item_radio_02").click(function () {
+       var radio_two_val=$('#pass_suggest_item_radio_02:radio:checked').val();
+       text.focus().val(radio_two_val);
+       $('.pass_suggest_name_div').css("display","none");
+   });
+   $("#pass_suggest_item_radio_03").click(function () {
+       var radio_three_val=$('#pass_suggest_item_radio_03:radio:checked').val();
+       text.focus().val(radio_three_val);
+       $('.pass_suggest_name_div').css("display","none");
    });
    </script>
    </body>
