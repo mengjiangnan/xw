@@ -88,6 +88,7 @@
        $(".form_user_name_error_notice_span").css("display","none");
        $(".form_user_name_repeat_notice_span").css("display","none");
        $(".form_user_name_success_notice_span").css("display","none");
+       $(".form_user_name_isnumber_notice_span").css("display","none");
    }).blur(function () {
        text.css("border-color","#ddd");
        $(".form_user_name_normal_notice_span").css("display","none");
@@ -132,6 +133,7 @@
        $(".form_user_name_normal_notice_span").css("display","none");
        $(".form_user_name_repeat_notice_span").css("display","none");
        $(".form_user_name_success_notice_span").css("display","none");
+       $(".form_user_name_isnumber_notice_span").css("display","none");
    });
    /*点击radio选项后，input框中的值成为当前值，而且radio隐藏*/
    $("#pass_suggest_item_radio_01").click(function () {
