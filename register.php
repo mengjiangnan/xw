@@ -84,7 +84,7 @@
    /*焦点在input框内时边框颜色变为蓝色，当焦点离开input框时，边框颜色还原为灰色*/
    var text = $(".form_user_name_input");
    var inner_input = $(".form_user_name_clear_btn_span");
-   var reg =/[\u4E00-\u9FA5]|[\uFE30-\uFFA0]/gi;
+   var reg =/.*[\u4e00-\u9fa5]+.*$/;
    text.focus(function () {
        text.css("border-color","#3079ED");
        $(".form_user_name_normal_notice_span").css("display","block");
@@ -95,7 +95,7 @@
    }).blur(function () {
        text.css("border-color","#ddd");
        $(".form_user_name_normal_notice_span").css("display","none");
-       if(isNaN(text.val())&&!(/.*[\u4e00-\u9fa5]+.*$/.test(document.register_form_name.form_user_name_inputname.value))){
+       if(isNaN(text.val())&&!(reg.test(text.val()))){
            /*input框提交AJAX请求*/
            $.post(
                "./Ajax/xw_register_ajax_username_verify.php",
@@ -115,7 +115,7 @@
            );
        }else if(text.val()==''){
            //什么也不做
-       }else if(/.*[\u4e00-\u9fa5]+.*$/.test(document.register_form_name.form_user_name_inputname.value)){
+       }else if(reg.test(text.val())){
            alert("中文");
        } else{
            $(".form_user_name_isnumber_notice_span").css("display","block");
