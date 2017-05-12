@@ -12,6 +12,8 @@
        <title>
            register
        </title>
+       <!--字符编码utf-8-->
+       <meta charset="UTF-8">
        <!--标题图标-->
        <link rel="shortcut icon" href="./Image/icon/xw_title_icon.ico" type="image/x-icon">
        <!--顶部导航CSS-->
@@ -93,7 +95,7 @@
    }).blur(function () {
        text.css("border-color","#ddd");
        $(".form_user_name_normal_notice_span").css("display","none");
-       if(isNaN(text.val())&&!(reg.test(text.val()))){
+       if(isNaN(text.val())&&!(/.*[\u4e00-\u9fa5]+.*$/.test(document.register_form_name.form_user_name_inputname.value))){
            /*input框提交AJAX请求*/
            $.post(
                "./Ajax/xw_register_ajax_username_verify.php",

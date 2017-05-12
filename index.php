@@ -12,6 +12,8 @@
            echo $xw_index_title;
            ?>
        </title>
+       <!--字符编码utf-8-->
+       <meta charset="UTF-8">
        <!--标题图标-->
        <link rel="shortcut icon" href="./Image/icon/xw_title_icon.ico" type="image/x-icon">
        <!--顶部导航CSS-->
