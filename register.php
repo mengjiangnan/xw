@@ -110,7 +110,9 @@
                    }
                }
            );
-       }else {
+       }else if(text.val()==''){
+           //什么也不做
+       }else{
            $(".form_user_name_isnumber_notice_span").css("display","block");
        }
    });
