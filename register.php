@@ -61,7 +61,7 @@
                    <p class="pass_suggest_item">
                        <label name="suggestName">
                            <input name="suggestName" id="pass_suggest_item_radio_01" class="pass_suggest_item_radio" type="radio" value="123">
-                           123
+                           <?php @session_start(); echo $_SESSION['user_name']; ?>
                        </label>
                    </p>
                    <p class="pass_suggest_item">
@@ -88,9 +88,7 @@
     * 中英文统计(一个中文算两个字符)
     */
    function chEnWordCount(str){
-       //alert(str.length);
        var count = str.replace(/[^\x00-\xff]/g,"**").length;
-       //alert(count);
        return count;
    }
    text.focus(function () {
