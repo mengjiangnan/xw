@@ -1,10 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Administrator
- * Date: 2017/4/24
- * Time: 9:18
- */
+session_start(); //开启session
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -61,7 +56,7 @@
                    <p class="pass_suggest_item">
                        <label name="suggestName">
                            <input name="suggestName" id="pass_suggest_item_radio_01" class="pass_suggest_item_radio" type="radio" value="123">
-                           <?php @session_start(); echo $_SESSION['user_name']; ?>
+                           <?php  echo @$_SESSION['user_name']; ?>
                        </label>
                    </p>
                    <p class="pass_suggest_item">
@@ -114,8 +109,10 @@
                "./Ajax/xw_register_ajax_username_verify.php",
                $('#form_user_name_input_id').serialize()+'&active='+$(event.target).attr('id'),
                function (data) {
-                   var code = $(data)[0].nodeName.toLowerCase();
-                   if(code=='success'){
+                   var jsondata = $.parseJSON(data);
+                   alert(jsondata.b);
+                   //var code = $(data)[0].nodeName.toLowerCase();
+                   if(jsondata.a=='success'){
                        $(".form_user_name_repeat_notice_span").css("display","block");
                        $('.pass_suggest_name_div').css("display","block");
                    }else if(code=='error'){

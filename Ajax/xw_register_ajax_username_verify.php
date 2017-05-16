@@ -13,7 +13,9 @@ if (!empty($_POST['form_user_name_inputname'])){
     if ($result==1){
         session_start();
         $_SESSION['user_name']=$form_user_name_inputname;
-        die("<success />");
+        $arr = array ('a'=>'success','b'=>$form_user_name_inputname);
+        die(json_encode($arr));
+        //die("<success />");
     } else if($result==0){
         die("<error />");
     }
