@@ -13,11 +13,13 @@ if (!empty($_POST['form_user_name_inputname'])){
     if ($result==1){
         session_start();
         $_SESSION['user_name']=$form_user_name_inputname;
-        $arr = array ('a'=>'success','b'=>$form_user_name_inputname);
-        die(json_encode($arr));
+        $success_arr = array ('state'=>'success','user_name'=>$form_user_name_inputname);
+        die(json_encode($success_arr));
         //die("<success />");
     } else if($result==0){
-        die("<error />");
+        $fail_arr = array ('state'=>'error');
+        die(json_encode($fail_arr));
+        //die("<error />");
     }
 }else{
     die("<null />");

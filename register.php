@@ -54,9 +54,9 @@ session_start(); //开启session
                </p>
                <div class="pass_suggest_name_div">
                    <p class="pass_suggest_item">
-                       <label name="suggestName">
+                       <label name="suggestName" class="suggest_test">
                            <input name="suggestName" id="pass_suggest_item_radio_01" class="pass_suggest_item_radio" type="radio" value="123">
-                           <?php  echo @$_SESSION['user_name']; ?>
+                           <!--<?php echo @$_SESSION['user_name']; ?>-->
                        </label>
                    </p>
                    <p class="pass_suggest_item">
@@ -110,12 +110,12 @@ session_start(); //开启session
                $('#form_user_name_input_id').serialize()+'&active='+$(event.target).attr('id'),
                function (data) {
                    var jsondata = $.parseJSON(data);
-                   alert(jsondata.b);
                    //var code = $(data)[0].nodeName.toLowerCase();
-                   if(jsondata.a=='success'){
+                   alert($('.suggest_test').text(jsondata.user_name));
+                   if(jsondata.state =='success'){
                        $(".form_user_name_repeat_notice_span").css("display","block");
                        $('.pass_suggest_name_div').css("display","block");
-                   }else if(code=='error'){
+                   }else if(jsondata.state=='error'){
                        $(".form_user_name_repeat_notice_span").css("display","none");
                        $(".form_user_name_success_notice_span").css("display","block");
                    }else{
