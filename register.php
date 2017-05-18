@@ -114,9 +114,9 @@ session_start(); //开启session
                    var jsondata = $.parseJSON(data);
                    //$('#pass_suggest_item_radio_01').val(jsondata.user_name);
                    var b = JSON.stringify(jsondata.user_name);
-                   var c = b.replace(/\"/g, "");
-                   var a = $(".test_span").text(c);
-                   alert(typeof c);
+                   //var c = b.replace(/\"/g, "");
+                   var a = $(".test_span").text(b);
+                   //alert(jsondata.state);
                    if(jsondata.state =='success'){
                        $(".form_user_name_repeat_notice_span").css("display","block");
                        $('.pass_suggest_name_div').css("display","block");
