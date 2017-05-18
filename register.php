@@ -113,13 +113,11 @@ session_start(); //开启session
                function (data) {
                    var jsondata = $.parseJSON(data);
                    //$('#pass_suggest_item_radio_01').val(jsondata.user_name);
-                   var b = JSON.stringify(jsondata.user_name);
-                   //var c = b.replace(/\"/g, "");
-                   var a = $(".test_span").text(b);
-                   //alert(jsondata.state);
                    if(jsondata.state =='success'){
                        $(".form_user_name_repeat_notice_span").css("display","block");
                        $('.pass_suggest_name_div').css("display","block");
+                       var c = jsondata.user_name.toString();
+                       $(".test_span").text(c);
                    }else if(jsondata.state=='error'){
                        $(".form_user_name_repeat_notice_span").css("display","none");
                        $(".form_user_name_success_notice_span").css("display","block");
