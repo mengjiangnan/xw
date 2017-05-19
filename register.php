@@ -52,8 +52,8 @@
                <div class="pass_suggest_name_div">
                    <p class="pass_suggest_item">
                        <label name="suggestName" class="suggest_test">
-                           <input name="suggestName" id="pass_suggest_item_radio_01" class="pass_suggest_item_radio" type="radio" value="123">
-                           <span class="test_span"></span>
+                           <input name="suggestName" id="pass_suggest_item_radio_one" class="pass_suggest_item_radio" type="radio" value="">
+                           <span class="my_user_name_one_span"></span>
                        </label>
                    </p>
                    <p class="pass_suggest_item">
@@ -110,8 +110,9 @@
                    if(jsondata.state =='success'){
                        $(".form_user_name_repeat_notice_span").css("display","block");
                        $('.pass_suggest_name_div').css("display","block");
-                       var c = jsondata.user_name.toString();
-                       $(".test_span").text(c);
+                       var my_user_name = jsondata.user_name.toString();
+                       $(".my_user_name_one_span").text(my_user_name);
+                       $("#pass_suggest_item_radio_one").val(my_user_name);
                    }else if(jsondata.state=='error'){
                        $(".form_user_name_repeat_notice_span").css("display","none");
                        $(".form_user_name_success_notice_span").css("display","block");
@@ -148,8 +149,8 @@
        $(".form_user_name_isnumber_notice_span").css("display","none");
    });
    /*点击radio选项后，input框中的值成为当前值，而且radio隐藏*/
-   $("#pass_suggest_item_radio_01").click(function () {
-       var radio_one_val=$('#pass_suggest_item_radio_01:radio:checked').val();
+   $("#pass_suggest_item_radio_one").click(function () {
+       var radio_one_val=$('#pass_suggest_item_radio_one:radio:checked').val();
        text.focus().val(radio_one_val);
        $('.pass_suggest_name_div').css("display","none");
    });
