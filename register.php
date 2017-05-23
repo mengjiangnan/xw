@@ -76,12 +76,25 @@
    /*焦点在input框内时边框颜色变为蓝色，当焦点离开input框时，边框颜色还原为灰色*/
    var text = $(".form_user_name_input");
    var inner_input = $(".form_user_name_clear_btn_span");
-   /**
+   /*
     * 中英文统计(一个中文算两个字符)
     */
    function chEnWordCount(str){
        var count = str.replace(/[^\x00-\xff]/g,"**").length;
        return count;
+   }
+   /*
+   * 随机字符串生成（数字+英文）
+   */
+   function randomString(len) {
+       len = len || 32;
+       var $chars = 'ABCDEFGHJKMNPQRSTWXYZabcdefhijkmnprstwxyz2345678';    /****默认去掉了容易混淆的字符oOLl,9gq,Vv,Uu,I1****/
+       var maxPos = $chars.length;
+       var pwd = '';
+       for (i = 0; i < len; i++) {
+           pwd += $chars.charAt(Math.floor(Math.random() * maxPos));
+       }
+       return pwd;
    }
    text.focus(function () {
        text.css("border-color","#3079ED");
@@ -93,14 +106,14 @@
    }).blur(function () {
        text.css("border-color","#ddd");
        $(".form_user_name_normal_notice_span").css("display","none");
-       if(chEnWordCount(text.val())>=14){
+       if(chEnWordCount(text.val())>=15){
            $(".form_user_name_normal_notice_span").css("display","none");
            $(".form_user_name_error_notice_span").css("display","block");
        }else {
            $(".form_user_name_error_notice_span").css("display","none");
        }
        /*内容不能为纯数字且内容长度小于14*/
-       if(isNaN(text.val())&&(chEnWordCount(text.val())<14)){
+       if(isNaN(text.val())&&(chEnWordCount(text.val())<15)){
            /*input框提交AJAX请求*/
            $.post(
                "./Ajax/xw_register_ajax_username_verify.php",
@@ -109,10 +122,12 @@
                    var jsondata = $.parseJSON(data);
                    if(jsondata.state =='success'){
                        $(".form_user_name_repeat_notice_span").css("display","block");
-                       $('.pass_suggest_name_div').css("display","block");
-                       var my_user_name = jsondata.user_name.toString();
-                       $(".my_user_name_one_span").text(my_user_name);
-                       $("#pass_suggest_item_radio_one").val(my_user_name);
+                       if((chEnWordCount(text.val())>=3)&&(chEnWordCount(text.val())<=12)){
+                           $('.pass_suggest_name_div').css("display","block");
+                           var my_user_name = jsondata.user_name.toString()+randomString(3);
+                           $(".my_user_name_one_span").text(my_user_name);
+                           $("#pass_suggest_item_radio_one").val(my_user_name);
+                       }
                    }else if(jsondata.state=='error'){
                        $(".form_user_name_repeat_notice_span").css("display","none");
                        $(".form_user_name_success_notice_span").css("display","block");
@@ -123,9 +138,9 @@
            );
        }else if(text.val()==''){
            //什么也不做
-       }else if(isNaN(text.val())&&(chEnWordCount(text.val())>=14)){
+       }else if(isNaN(text.val())&&(chEnWordCount(text.val())>=15)){
            $(".form_user_name_isnumber_notice_span").css("display","none");
-       }else if(!isNaN(text.val())&&(chEnWordCount(text.val())>=14)) {
+       }else if(!isNaN(text.val())&&(chEnWordCount(text.val())>=15)) {
            $(".form_user_name_isnumber_notice_span").css("display","none");
        } else {
            $(".form_user_name_isnumber_notice_span").css("display","block");
