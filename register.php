@@ -118,7 +118,7 @@
            /*input框提交AJAX请求*/
            $.post(
                "./Ajax/xw_register_ajax_username_verify.php",
-               $('#form_user_name_input_id').serialize()+'&active='+$(event.target).attr('id'),
+               $('#form_user_name_input_id').serialize()+'&active='+$(e.target).attr('id'),
                function (data) {
                    if(data.state =='success'){
                        $(".form_user_name_repeat_notice_span").css("display","block");
