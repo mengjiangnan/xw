@@ -58,8 +58,8 @@
                    </p>
                    <p class="pass_suggest_item">
                        <label name="suggestName">
-                           <input name="suggestName" id="pass_suggest_item_radio_02" class="pass_suggest_item_radio" type="radio" value="456">
-                           456
+                           <input name="suggestName" id="pass_suggest_item_radio_two" class="pass_suggest_item_radio" type="radio" value="456">
+                           <span class="my_user_name_two_span"></span>
                        </label>
                    </p>
                    <p class="pass_suggest_item">
@@ -96,6 +96,7 @@
        }
        return pwd;
    }
+
    text.focus(function () {
        text.css("border-color","#3079ED");
        $(".form_user_name_normal_notice_span").css("display","block");
@@ -103,7 +104,7 @@
        $(".form_user_name_repeat_notice_span").css("display","none");
        $(".form_user_name_success_notice_span").css("display","none");
        $(".form_user_name_isnumber_notice_span").css("display","none");
-   }).blur(function () {
+   }).blur(function (e) {
        text.css("border-color","#ddd");
        $(".form_user_name_normal_notice_span").css("display","none");
        if(chEnWordCount(text.val())>=15){
@@ -119,22 +120,24 @@
                "./Ajax/xw_register_ajax_username_verify.php",
                $('#form_user_name_input_id').serialize()+'&active='+$(event.target).attr('id'),
                function (data) {
-                   var jsondata = $.parseJSON(data);
-                   if(jsondata.state =='success'){
+                   if(data.state =='success'){
                        $(".form_user_name_repeat_notice_span").css("display","block");
                        if((chEnWordCount(text.val())>=3)&&(chEnWordCount(text.val())<=12)){
                            $('.pass_suggest_name_div').css("display","block");
-                           var my_user_name = jsondata.user_name.toString()+randomString(3);
-                           $(".my_user_name_one_span").text(my_user_name);
-                           $("#pass_suggest_item_radio_one").val(my_user_name);
+                           var my_user_name_one = data.user_name.toString()+randomString(3);
+                           $(".my_user_name_one_span").text(my_user_name_one);
+                           $("#pass_suggest_item_radio_one").val(my_user_name_one);
+                           var my_user_name_two =randomString(3) + data.user_name.toString();
+                           $(".my_user_name_two_span").text(my_user_name_two);
+                           $("#pass_suggest_item_radio_two").val(my_user_name_two);
                        }
-                   }else if(jsondata.state=='error'){
+                   }else if(data.state=='error'){
                        $(".form_user_name_repeat_notice_span").css("display","none");
                        $(".form_user_name_success_notice_span").css("display","block");
                    }else{
                        $(".form_user_name_repeat_notice_span").css("display","none");
                    }
-               }
+               },"json"
            );
        }else if(text.val()==''){
            //什么也不做
@@ -145,6 +148,7 @@
        } else {
            $(".form_user_name_isnumber_notice_span").css("display","block");
        }
+       return e.preventDefault();
    });
 
    /*当input框内有值的时候，清除按钮显示*/
@@ -169,8 +173,8 @@
        text.focus().val(radio_one_val);
        $('.pass_suggest_name_div').css("display","none");
    });
-   $("#pass_suggest_item_radio_02").click(function () {
-       var radio_two_val=$('#pass_suggest_item_radio_02:radio:checked').val();
+   $("#pass_suggest_item_radio_two").click(function () {
+       var radio_two_val=$('#pass_suggest_item_radio_two:radio:checked').val();
        text.focus().val(radio_two_val);
        $('.pass_suggest_name_div').css("display","none");
    });

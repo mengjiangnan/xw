@@ -98,8 +98,8 @@
     background: url("../Image/icon/err_small.png") 0 0 no-repeat;
 }
 .form_user_name_success_notice_span{
-    display: none;
-    float: left;
+    display:none;
+    float:left;
     position:relative;
     width:250px;
     top:12px;
