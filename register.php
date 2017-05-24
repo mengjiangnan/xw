@@ -1,4 +1,4 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
    <head>
        <title>
@@ -64,8 +64,8 @@
                    </p>
                    <p class="pass_suggest_item">
                        <label name="suggestName">
-                           <input name="suggestName" id="pass_suggest_item_radio_03" class="pass_suggest_item_radio" type="radio" value="789">
-                           789
+                           <input name="suggestName" id="pass_suggest_item_radio_three" class="pass_suggest_item_radio" type="radio" value="789">
+                           <span class="my_user_name_three_span"></span>
                        </label>
                    </p>
                </div>
@@ -95,6 +95,16 @@
            pwd += $chars.charAt(Math.floor(Math.random() * maxPos));
        }
        return pwd;
+   }
+   /*
+   * 随机星座中文字符
+   */
+   function radomChinaString(len){
+       len = len || 2;
+       var ChinaArr = new Array("白羊","金牛","双子","巨蟹","天平","狮子","射手","水瓶","摩羯","天蝎","处女","双鱼");
+       var maxPos = ChinaArr.length;
+       var index = Math.floor((Math.random()*maxPos));
+       return ChinaArr[index];
    }
 
    text.focus(function () {
@@ -127,9 +137,12 @@
                            var my_user_name_one = data.user_name.toString()+randomString(3);
                            $(".my_user_name_one_span").text(my_user_name_one);
                            $("#pass_suggest_item_radio_one").val(my_user_name_one);
-                           var my_user_name_two =randomString(3) + data.user_name.toString();
+                           var my_user_name_two = randomString(3) + data.user_name.toString();
                            $(".my_user_name_two_span").text(my_user_name_two);
                            $("#pass_suggest_item_radio_two").val(my_user_name_two);
+                           var my_user_name_three = radomChinaString(2) + data.user_name.toString();
+                           $(".my_user_name_three_span").text(my_user_name_three);
+                           $("#pass_suggest_item_radio_three").val(my_user_name_three);
                        }
                    }else if(data.state=='error'){
                        $(".form_user_name_repeat_notice_span").css("display","none");
@@ -178,8 +191,8 @@
        text.focus().val(radio_two_val);
        $('.pass_suggest_name_div').css("display","none");
    });
-   $("#pass_suggest_item_radio_03").click(function () {
-       var radio_three_val=$('#pass_suggest_item_radio_03:radio:checked').val();
+   $("#pass_suggest_item_radio_three").click(function () {
+       var radio_three_val=$('#pass_suggest_item_radio_three:radio:checked').val();
        text.focus().val(radio_three_val);
        $('.pass_suggest_name_div').css("display","none");
    });

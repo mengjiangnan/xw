@@ -4,7 +4,7 @@
   $my_class->setTitle('xw');
   $xw_index_title = $my_class->getTitle();
 ?>
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
  <head>
        <title>
