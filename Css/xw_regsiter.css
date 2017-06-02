@@ -18,7 +18,7 @@
 #hidden_fields{
     display: none;
 }
-.form_item_user_name{
+.register_form_item{
     position: relative;
     clear: both;
     margin-bottom: 20px;

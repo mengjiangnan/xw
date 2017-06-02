@@ -30,7 +30,7 @@
                <p id="hidden_fields">
                    <input name="u" type="hidden">
                </p>
-               <p class="form_item_user_name">
+               <p class="register_form_item form_item_user_name">
                    <label class="form_user_name_label">
                        用户名
                    </label>
@@ -69,6 +69,9 @@
                        </label>
                    </p>
                </div>
+               <p class="register_form_item form_item_user_phone">
+                   <label class="form_item_user_phone_label"></label>
+               </p>
            </form>
        </div>
    </div>

@@ -56,7 +56,7 @@
                 </li>
                 <li>
                     <img alt="" src="./Image/other_img/member_regedit.svg" width="15">
-                    <a>新会员注册</a>
+                    <a href="register.php">新会员注册</a>
                 </li>
             </ul>
         </div>
