@@ -85,6 +85,16 @@
    /*焦点在input框内时边框颜色变为蓝色，当焦点离开input框时，边框颜色还原为灰色*/
    var text = $(".form_user_name_input");
    var inner_input = $(".form_user_name_clear_btn_span");
+
+   /*手机号正则验证*/
+   function checkMobile(){
+       var sMobile =  document.getElementById('form_user_phone_input_id').value;
+       if(!(/^1[34578]\d{9}$/.test(sMobile))){
+           alert("不是完整的11位手机号或者正确的手机号前七位");
+           return false;
+       }
+   }
+
    /*
     * 中英文统计(一个中文算两个字符)
     */
@@ -177,6 +187,8 @@
        $(".form_user_phone_input").css("border-color","#3079ED");
    }).blur(function () {
        $(".form_user_phone_input").css("border-color","#ddd");
+       /*检测手机号是否合法*/
+       checkMobile();
    });
 
    /*当用户名input框内有值的时候，清除按钮显示*/
@@ -225,14 +237,6 @@
        text.focus().val(radio_three_val);
        $('.pass_suggest_name_div').css("display","none");
    });
-   /*手机号正则验证*/
-   function checkMobile(){
-       var sMobile = $(".form_user_input form_user_phone_input").value
-       if(!(/^1[3|4|5|8][0-9]\d{4,8}$/.test(sMobile))){
-           alert("不是完整的11位手机号或者正确的手机号前七位");
-           return false;
-       }
-   }
    </script>
    </body>
 </html>
