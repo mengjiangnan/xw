@@ -70,7 +70,9 @@
                    </p>
                </div>
                <p class="register_form_item form_item_user_phone">
-                   <label class="form_item_user_phone_label"></label>
+                   <label class="form_item_user_phone_label">
+                       手机号
+                   </label>
                </p>
            </form>
        </div>
