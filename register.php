@@ -35,7 +35,7 @@
                        用户名
                    </label>
                    <!--用户名input框-->
-                   <input name="form_user_name_inputname" id="form_user_name_input_id" class="form_user_name_input" type="text" placeholder="请设置用户名">
+                   <input name="form_user_name_inputname" id="form_user_name_input_id" class="form_user_input form_user_name_input" type="text" placeholder="请设置用户名">
                    <!--显示清除图标-->
                    <span class="form_user_name_clear_btn_span"></span>
                    <!--右侧普通提示信息-->
@@ -58,13 +58,13 @@
                    </p>
                    <p class="pass_suggest_item">
                        <label name="suggestName">
-                           <input name="suggestName" id="pass_suggest_item_radio_two" class="pass_suggest_item_radio" type="radio" value="456">
+                           <input name="suggestName" id="pass_suggest_item_radio_two" class="pass_suggest_item_radio" type="radio" value="">
                            <span class="my_user_name_two_span"></span>
                        </label>
                    </p>
                    <p class="pass_suggest_item">
                        <label name="suggestName">
-                           <input name="suggestName" id="pass_suggest_item_radio_three" class="pass_suggest_item_radio" type="radio" value="789">
+                           <input name="suggestName" id="pass_suggest_item_radio_three" class="pass_suggest_item_radio" type="radio" value="">
                            <span class="my_user_name_three_span"></span>
                        </label>
                    </p>
@@ -73,6 +73,8 @@
                    <label class="form_user_label form_item_user_phone_label">
                        手机号
                    </label>
+                   <!--手机号input框-->
+                   <input name="form_user_phone_inputphone" id="form_user_phone_input_id" class="form_user_input form_user_phone_input" type="text" placeholder="可用于登录和找回密码">
                </p>
            </form>
        </div>
