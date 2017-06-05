@@ -24,12 +24,13 @@
     margin-bottom: 20px;
     zoom: 1;
 }
-.form_user_name_label{
+.form_user_label{
     display: block;
     float: left;
     height: 42px;
     width: 65px;
     margin-right: 10px;
+    margin-bottom: 20px;
     line-height: 42px;
     font-size: 14px;
     color: #666;
