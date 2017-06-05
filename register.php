@@ -75,6 +75,8 @@
                    </label>
                    <!--手机号input框-->
                    <input name="form_user_phone_inputphone" id="form_user_phone_input_id" class="form_user_input form_user_phone_input" type="text" placeholder="可用于登录和找回密码">
+                   <!--显示清除图标-->
+                   <span class="form_user_phone_clear_btn_span"></span>
                </p>
            </form>
        </div>
@@ -170,14 +172,34 @@
        }
        return e.preventDefault();
    });
+   /*当光标移入手机号input框时，input框变成蓝色。光标移出后input框变成灰色*/
+   $(".form_user_phone_input").focus(function () {
+       $(".form_user_phone_input").css("border-color","#3079ED");
+   }).blur(function () {
+       $(".form_user_phone_input").css("border-color","#ddd");
+   });
 
-   /*当input框内有值的时候，清除按钮显示*/
+   /*当用户名input框内有值的时候，清除按钮显示*/
    text.bind("input propertychange",function () {
        if(text.val().length!==0){
            inner_input.show();
        }
    });
-   /*input框内清除按钮点击后，input框内容为空，提示隐藏，清除按钮隐藏*/
+
+   /*当手机号input框内有值的时候，清除按钮显示*/
+   $(".form_user_phone_input").bind("input propertychange",function () {
+       if($(".form_user_phone_input").val().length!==0){
+           $(".form_user_phone_clear_btn_span").show();
+       }
+   });
+
+   /*手机名input框内清除按钮点击后，手机名input框内容为空，提示隐藏，清除按钮隐藏*/
+   $(".form_user_phone_clear_btn_span").click(function () {
+       $(".form_user_phone_input").val('');
+       $(".form_user_phone_clear_btn_span").hide();
+   });
+
+   /*用户名input框内清除按钮点击后，用户名input框内容为空，提示隐藏，清除按钮隐藏*/
    inner_input.click(function () {
        text.val('');
        inner_input.hide();
@@ -203,6 +225,14 @@
        text.focus().val(radio_three_val);
        $('.pass_suggest_name_div').css("display","none");
    });
+   /*手机号正则验证*/
+   function checkMobile(){
+       var sMobile = $(".form_user_input form_user_phone_input").value
+       if(!(/^1[3|4|5|8][0-9]\d{4,8}$/.test(sMobile))){
+           alert("不是完整的11位手机号或者正确的手机号前七位");
+           return false;
+       }
+   }
    </script>
    </body>
 </html>
