@@ -39,7 +39,7 @@
                    <!--显示清除图标-->
                    <span class="form_user_name_clear_btn_span"></span>
                    <!--右侧普通提示信息-->
-                   <span class="form_user_name_normal_notice_span">中英文均可，最长7个汉字或14个英文</span>
+                   <span class="form_normal_notice_span form_user_name_normal_notice_span">中英文均可，最长7个汉字或14个英文</span>
                    <!--右侧错误提示信息-->
                    <span class="form_user_name_error_notice_span">用户名不能超过7个汉字或14个字符</span>
                    <!--右侧用户名重复提示信息-->
@@ -77,6 +77,8 @@
                    <input name="form_user_phone_inputphone" id="form_user_phone_input_id" class="form_user_input form_user_phone_input" type="text" placeholder="可用于登录和找回密码">
                    <!--显示清除图标-->
                    <span class="form_user_phone_clear_btn_span"></span>
+                   <!--右侧普通提醒-->
+                   <span class="form_normal_notice_span form_user_phone_normal_notice_span">请输入中国大陆手机号</span>
                </p>
            </form>
        </div>
@@ -185,10 +187,15 @@
    /*当光标移入手机号input框时，input框变成蓝色。光标移出后input框变成灰色*/
    $(".form_user_phone_input").focus(function () {
        $(".form_user_phone_input").css("border-color","#3079ED");
+       $(".form_user_phone_normal_notice_span").css("display","block");
    }).blur(function () {
        $(".form_user_phone_input").css("border-color","#ddd");
-       /*检测手机号是否合法*/
-       checkMobile();
+       $(".form_user_phone_normal_notice_span").css("display","none");
+       if(chEnWordCount($(".form_user_phone_input").val())>0){
+           /*检测手机号是否合法*/
+           checkMobile();
+       }
+
    });
 
    /*当用户名input框内有值的时候，清除按钮显示*/
