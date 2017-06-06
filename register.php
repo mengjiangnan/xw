@@ -74,11 +74,13 @@
                        手机号
                    </label>
                    <!--手机号input框-->
-                   <input name="form_user_phone_inputphone" id="form_user_phone_input_id" class="form_user_input form_user_phone_input" type="text" placeholder="可用于登录和找回密码">
+                   <input name="form_user_phone_inputphone" id="form_user_phone_input_id" class="form_user_input form_user_phone_input" type="text" maxlength="11" placeholder="可用于登录和找回密码">
                    <!--显示清除图标-->
                    <span class="form_user_phone_clear_btn_span"></span>
-                   <!--右侧普通提醒-->
+                   <!--右侧普通提示信息-->
                    <span class="form_normal_notice_span form_user_phone_normal_notice_span">请输入中国大陆手机号</span>
+                   <!--右侧错误提示信息-->
+                   <span class="form_user_phone_error_notice_span">手机号码格式不正确</span>
                </p>
            </form>
        </div>
@@ -92,8 +94,9 @@
    function checkMobile(){
        var sMobile =  document.getElementById('form_user_phone_input_id').value;
        if(!(/^1[34578]\d{9}$/.test(sMobile))){
-           alert("不是完整的11位手机号或者正确的手机号前七位");
            return false;
+       }else {
+           return true;
        }
    }
 
@@ -188,12 +191,16 @@
    $(".form_user_phone_input").focus(function () {
        $(".form_user_phone_input").css("border-color","#3079ED");
        $(".form_user_phone_normal_notice_span").css("display","block");
+       $(".form_user_phone_error_notice_span").css("display","none");
    }).blur(function () {
        $(".form_user_phone_input").css("border-color","#ddd");
        $(".form_user_phone_normal_notice_span").css("display","none");
        if(chEnWordCount($(".form_user_phone_input").val())>0){
            /*检测手机号是否合法*/
-           checkMobile();
+          if(checkMobile()===false){
+              $(".form_user_phone_error_notice_span").css("display","block");
+              $(".form_user_phone_normal_notice_span").css("display","none");
+          }
        }
 
    });
@@ -216,6 +223,7 @@
    $(".form_user_phone_clear_btn_span").click(function () {
        $(".form_user_phone_input").val('');
        $(".form_user_phone_clear_btn_span").hide();
+       $(".form_user_phone_error_notice_span").css("display","none");
    });
 
    /*用户名input框内清除按钮点击后，用户名input框内容为空，提示隐藏，清除按钮隐藏*/
