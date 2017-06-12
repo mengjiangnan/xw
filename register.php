@@ -84,6 +84,12 @@
                    <!--右侧手机号可用提示信息-->
                    <span class="form_user_phone_success_notice_span"></span>
                </p>
+               <!--验证图片弹出框-->
+               <div class="pass_nocaptcha" id="pass_nocaptcha_id">
+                   <div class="nocaptcha">
+                       <p>拖动右侧图片完成拼图以获得验证码</p>
+                   </div>
+               </div>
                <p class="register_form_item form_item_phone_verify">
                    <label class="form_user_label form_item_user_verify_label">
                        验证码

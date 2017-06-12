@@ -183,3 +183,26 @@
     font-size: 12px;
     background: url("../Image/icon/err_small.png") 0 0 no-repeat;
 }
+.pass_nocaptcha{
+    display: none;
+    position: absolute;
+    margin: 42px 0 0 75px;
+    z-index: 100;
+    width: 350px;
+    height: 270px;
+}
+.nocaptcha{
+    position: relative;
+    overflow: hidden;
+    width: 348px;
+    height: 263px;
+    border:1px solid #d1d1d1;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.2);
+    background: #fff;
+}
+.nocaptcha p{
+    font-size: 14px;
+    color: #333;
+    line-height: 14px;
+    margin: 24px;
+}
