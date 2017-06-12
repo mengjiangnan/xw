@@ -84,6 +84,13 @@
                    <!--右侧手机号可用提示信息-->
                    <span class="form_user_phone_success_notice_span"></span>
                </p>
+               <p class="register_form_item form_item_phone_verify">
+                   <label class="form_user_label form_item_user_verify_label">
+                       验证码
+                   </label>
+                   <!--验证码input框-->
+                   <input name="form_user_verify_inputverify" id="form_user_verify_input_id" class="form_user_input form_user_verify_input" type="text" maxlength="6" placeholder="请输入验证码">
+               </p>
            </form>
        </div>
    </div>
