@@ -134,6 +134,19 @@
     font-size:12px;
     background:url("../Image/icon/reg_icons.png") -80px 0 no-repeat;
 }
+.form_user_phone_success_notice_span{
+    display:none;
+    float:left;
+    position:relative;
+    width:250px;
+    top:12px;
+    color:#fc4343;
+    height:16px;
+    line-height:14px;
+    padding-left:20px;
+    font-size:12px;
+    background:url("../Image/icon/reg_icons.png") -80px 0 no-repeat;
+}
 .pass_suggest_name_div{
     display: none;
     margin-top: 50px;
