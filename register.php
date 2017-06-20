@@ -106,7 +106,13 @@
                </p>
                <p class="register_form_item form_item_isAgree">
                    <!--协议单选框-->
-                   <input name="form_user_isAgree_name" id="form_user_isAgree_id" class="form_user_input form_user_isAgree_input" type="checkbox" checked="checked" autocomplete="off">
+                   <input name="form_user_isAgree_name" id="form_user_isAgree_id" class="form_user_isAgree_input" type="checkbox" checked="checked" autocomplete="off">
+                   <label class="form_user_read_agree_label">阅读并接受</label>
+                   <a class="form_user_agreement_a" href=#>XW用户协议</a>
+               </p>
+               <p class="register_form_item form_item_submit">
+                   <!--注册提交按钮-->
+                   <input class="form_user_submit form_user_submit_input" id="form_user_submit_id" type="submit" value="注册">
                </p>
            </form>
        </div>
