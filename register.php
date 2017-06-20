@@ -97,6 +97,17 @@
                    <!--验证码input框-->
                    <input name="form_user_verify_inputverify" id="form_user_verify_input_id" class="form_user_input form_user_verify_input" type="text" maxlength="6" placeholder="请输入验证码">
                </p>
+               <p class="register_form_item form_item_password">
+                   <label class="form_user_label form_item_user_password_label">
+                       密码
+                   </label>
+                   <!--密码input框-->
+                   <input name="form_user_password_input_name" id="form_user_password_input_id" class="form_user_input form_user_password_input" type="password" placeholder="请设置登陆密码">
+               </p>
+               <p class="register_form_item form_item_isAgree">
+                   <!--协议单选框-->
+                   <input name="form_user_isAgree_name" id="form_user_isAgree_id" class="form_user_input form_user_isAgree_input" type="checkbox" checked="checked" autocomplete="off">
+               </p>
            </form>
        </div>
    </div>
